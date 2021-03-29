@@ -1,7 +1,17 @@
 import React from "react"
 
-function Home() {
-  return <h1>Hello Gatsby!</h1>
+import Layout from "../core/Layout"
+
+import Header from "../containers/Header"
+import Footer from "../containers/Footer"
+
+const Home: React.FC = () => {
+  return (
+    <Layout>
+      <Header />
+      <Footer />
+    </Layout>
+  )
 }
 
 export default Home
