@@ -23,8 +23,12 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
+
       - name: Install
         run: npm install
+
+      - name: Lint
+        run: npm run eslint
 
       - name: Format
         run: npm run format
