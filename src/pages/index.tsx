@@ -2,14 +2,15 @@ import React from "react"
 
 import Layout from "../core/Layout"
 
-import Header from "../containers/Header"
-import Footer from "../containers/Footer"
+import Main from "../components/Main"
+import SectionLead from "../containers/SectionLead"
 
 const Home: React.FC = () => {
   return (
     <Layout>
-      <Header />
-      <Footer />
+      <Main>
+        <SectionLead />
+      </Main>
     </Layout>
   )
 }
