@@ -33,14 +33,18 @@
   "homepage": "https://github.com/stakefish/dogecoin.org#readme",
   "dependencies": {
     "gatsby": "^3.1.2",
+    "polished": "^4.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
     "react-intl": "^5.15.3",
+    "react-styled-flexboxgrid": "^3.2.1",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
+    "@types/react-helmet": "^6.1.0",
     "@types/react-intl": "^3.0.0",
     "@types/styled-components": "^5.1.9",
     "eslint": "^7.23.0",
