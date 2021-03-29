@@ -1,0 +1,19 @@
+{
+  "name": "dogecoin.org",
+  "version": "0.1.0",
+  "description": "dogecoin.org official website",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stakefish/dogecoin.org.git"
+  },
+  "author": "stakefish team",
+  "license": "Apache-2.0 License",
+  "bugs": {
+    "url": "https://github.com/stakefish/dogecoin.org/issues"
+  },
+  "homepage": "https://github.com/stakefish/dogecoin.org#readme"
+}
