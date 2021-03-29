@@ -1,0 +1,16 @@
+.DS_*
+*.log
+logs
+.cache
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+public
+
+*.sublime*
+
+psd
+thumb
+sketch
