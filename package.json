@@ -4,6 +4,7 @@
   "description": "dogecoin.org official website",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}'",
     "start": "gatsby develop",
     "build": "gatsby build"
   },
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3"
+    "@types/react-dom": "^17.0.3",
+    "prettier": "^2.2.1"
   }
 }
