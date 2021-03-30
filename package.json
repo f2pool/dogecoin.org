@@ -39,7 +39,8 @@
     "react-helmet": "^6.1.0",
     "react-intl": "^5.15.3",
     "react-styled-flexboxgrid": "^3.2.1",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "typewriter-effect": "^2.17.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.3",
