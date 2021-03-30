@@ -17,16 +17,14 @@ const hashtags = [
 ]
 
 const SectionAbout: React.FC = () => {
-  const [title, text1, text2, text3] = useFormatMessages([{ id: "ABOUT_TITLE" }, { id: "ABOUT_TEXT_1" }, { id: "ABOUT_TEXT_2" }, { id: "ABOUT_TEXT_3" }])
+  const [title, text] = useFormatMessages([{ id: "ABOUT_TITLE" }, { id: "ABOUT_TEXT" }])
 
   return (
     <Section as={S.Wrapper}>
       <Row center="xs">
         <Col xs={12} sm={8}>
           <S.Title>{title}</S.Title>
-          <S.Text>{text1}</S.Text>
-          <S.Text>{text2}</S.Text>
-          <S.Text>{text3}</S.Text>
+          <S.Text dangerouslySetInnerHTML={{ __html: text }} />
 
           <S.ImageStack></S.ImageStack>
 
