@@ -1,33 +1,55 @@
 import styled, { css } from "styled-components"
+import { rem } from "polished"
 
 interface TypeWriterProps {
   wordIndex: number
 }
-
-// TODO: use svg background
 export const Wrapper = styled.div<TypeWriterProps>`
-  height: 137px; // TODO: use svg background default height
+  position: relative;
+  display: inline-block;
+  padding: ${rem(10)} ${rem(40)} ${rem(20)} ${rem(30)};
 
-  ${(props) =>
-    props.wordIndex === 0 &&
-    css`
-      background-color: ${(props) => props.theme.colors.secondary};
-    `}
-  ${(props) =>
-    props.wordIndex === 1 &&
-    css`
-      background-color: ${(props) => props.theme.colors.accent};
-    `}
-  ${(props) =>
-    props.wordIndex === 2 &&
-    css`
-      background-color: ${(props) => props.theme.colors.primary};
-    `}
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    path {
+      transition: fill 0.3s ease;
+
+      ${(props) =>
+        props.wordIndex === 0 &&
+        css`
+          fill: ${(props) => props.theme.colors.secondary};
+        `}
+
+      ${(props) =>
+        props.wordIndex === 1 &&
+        css`
+          fill: ${(props) => props.theme.colors.primary};
+        `}
+
+      ${(props) =>
+        props.wordIndex === 2 &&
+        css`
+          fill: ${(props) => props.theme.colors.accent};
+        `}
+    }
+  }
 
   .Typewriter__wrapper {
     color: ${(props) => props.theme.colors.white};
   }
+
   .Typewriter__cursor {
     display: none;
   }
+`
+
+export const Text = styled.div`
+  display: inline-block;
+  position: relative;
+  z-index: 2;
 `

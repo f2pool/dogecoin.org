@@ -1,5 +1,4 @@
 import React from "react"
-import { withPrefix } from "gatsby"
 
 import * as S from "./styled"
 
@@ -9,7 +8,7 @@ import * as S from "./styled"
 interface ButtonProps {
   text: string
   textColor?: S.Color
-  icon?: string | null
+  icon?: React.ReactNode | string | null
   textFirst?: boolean
   backgroundColor?: S.BgColor
   layout?: S.Layout
@@ -53,7 +52,7 @@ const Button: React.FC<ButtonProps> = ({
       onClick={handleOnClick}
       as={!href ? as : "a"}
     >
-      {icon && <S.Icon src={withPrefix(`/images/icons/${icon}.svg`)} alt={icon} />}
+      {icon}
       {text && <span>{text}</span>}
     </S.Main>
   )

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { rem } from "polished"
+import { rem, rgba } from "polished"
 
 export const Title = styled.h1`
   text-align: center;
@@ -28,5 +28,12 @@ export const ShapesWrapper = styled.div`
 
   & > div:first-child {
     transform: translate3d(${rem(20)}, 0, 0);
+  }
+`
+
+export const Doge = styled.div`
+  img {
+    border-radius: 1000px;
+    box-shadow: 10px 10px 20px ${rgba("#000", 0.1)};
   }
 `

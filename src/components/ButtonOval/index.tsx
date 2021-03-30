@@ -12,7 +12,7 @@ import OvalPointy from "../../assets/shapes/oval-pointy.svg"
 interface OvalProps {
   text?: string
   textColor?: Color
-  icon?: string | null
+  icon?: React.ReactNode | string | null
   shapeType?: S.ShapeType
   backgroundColor?: BgColor
   href?: string | null
