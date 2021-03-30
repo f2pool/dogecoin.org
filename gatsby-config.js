@@ -1,12 +1,4 @@
 module.exports = {
-  plugins: [
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /assets/,
-        },
-      },
-    },
-  ],
+  pathPrefix: "/dogecoin.org",
+  plugins: [{ resolve: "gatsby-plugin-react-svg", options: { rule: { include: /assets/ } } }],
 }
