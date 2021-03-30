@@ -5,7 +5,7 @@ import { rem } from "polished"
  * Types
  */
 export type Color = "primary" | "accent" | "white"
-export type BgColor = "background" | "odd" | "white" | "mint" | "transparent"
+export type BgColor = "background" | "odd" | "white" | "mint" | "primary" | "transparent"
 export type Layout = "initial" | "space-between" | "center"
 
 interface ButtonProps {
@@ -90,6 +90,12 @@ export const Main = styled.button<ButtonProps>`
       svg path {
         fill: ${(props) => props.theme.colors.accent};
       }
+    `}
+  ${(props) =>
+    props.backgroundColor === "primary" &&
+    css`
+      color: ${props.theme.colors.white};
+      background-color: ${props.theme.colors.primary};
     `}
 
   // icons
