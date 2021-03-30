@@ -8,10 +8,10 @@ import { useFormatMessages } from "../../utils/hooks"
 import * as S from "./styled"
 
 const hashtags = [
-  { text: "fun", color: "#00665E", bg: "#FFD203" },
-  { text: "bonk", color: "#FFF", bg: "#00BEB5" },
+  { text: "muchfunny", color: "#00665E", bg: "#FFD203" },
+  { text: "dogecoinarmy", color: "#FFF", bg: "#00BEB5" },
   { text: "cryptocurrency", color: "#232D91", bg: "#C3F1FF" },
-  { text: "unique", color: "#FFF", bg: "#00BEB5" },
+  { text: "suchmemes", color: "#FFF", bg: "#00BEB5" },
   { text: "doge", color: "#232D91", bg: "#FFF" },
   { text: "shiba", color: "#00665E", bg: "#FFD203" },
 ]
@@ -24,7 +24,7 @@ const SectionAbout: React.FC = () => {
       <Row center="xs">
         <Col xs={12} sm={8}>
           <S.Title>{title}</S.Title>
-          <S.Text>{text}</S.Text>
+          <S.Text dangerouslySetInnerHTML={{ __html: text }} />
 
           <S.ImageStack></S.ImageStack>
 

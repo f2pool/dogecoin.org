@@ -3,7 +3,14 @@ import { rem } from "polished"
 
 export const Title = styled.h2``
 
-export const Text = styled.div``
+export const Text = styled.p`
+  span {
+    display: block;
+  }
+  span:not(:last-child) {
+    margin-bottom: ${rem(24)};
+  }
+`
 
 export const Wrapper = styled.section`
   padding: ${rem(106)} 0;

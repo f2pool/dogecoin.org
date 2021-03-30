@@ -1,6 +1,10 @@
 export default {
-  ABOUT_TITLE: "What is Doge?",
+  ABOUT_TITLE: "What is Dogecoin?",
   LEAD_BUTTON_TEXT_1: "Let's Wow",
   LEAD_BUTTON_TEXT_2: "Video",
-  ABOUT_TEXT: "Individually, participants in a mining pool contribute their processing power toward the effort of finding a block. If the pool is successful in these efforts, they receive a reward, typically in the form of the associated cryptocurrency. Rewards are usually divided between the individuals who contributed, according to the proportion of each individual's processing power or work relative to the whole group. In some cases, individual miners must show proof of work in order to receive their rewards."
+  ABOUT_TEXT: `
+    <span>Dogecoin is a cryptocurrency designed to be free from banking fees, fast, and most of all, fun!</span>
+    <span>Its mascot, the Shiba Inu as made famous from the Doge meme, represents the quirky and lighthearted nature which sets Dogecoin apart from other cryptocurrencies.</span>
+    <span>You can send Dogecoin anywhere on planet Earth and even use it to buy goods or book hotel rooms online.</span>
+    `,
 }
