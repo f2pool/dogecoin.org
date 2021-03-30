@@ -17,4 +17,12 @@ export default {
   GUIDE_STEP_4_SUBTITLE: "STEP 4",
   GUIDE_STEP_4_TITLE: "Stay Up-to-Date",
   GUIDE_CTA_TEXT: "Getting Started Guide",
+  MEME_DIP_ALT: "DIP-1337",
+  MEME_LIONKING_ALT: "Elon Musk holding a shiba inu dog in the Lion King cliff scene",
+  MEME_SOON_ALT: "Shiba inu dog driving Tesla",
+  MEME_CYBERTRUCK_ALT: "Shiba inu dog driving Tesla Cybertruck",
+  MEME_MAVS_ALT: "Dallas Mavericks' logo replaced with Doge coin image",
+  MEME_FINISH_ALT: "Shiba inus at olympics",
+  MEME_RACECAR_ALT: "A Ford race car painted with Doge coin memes",
+  MEME_MOON_ALT: "Shiba inu landing on the moon as an astronaut",
 }
