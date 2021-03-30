@@ -16,7 +16,8 @@ export const HeroRow = styled(Row)`
 export const StepShape = styled.div`
   width: 40%;
   max-width: 40%;
-  height: 100%;
+  height: 120px;
+  max-height: 120px;
   margin: 0 auto;
 
   display: flex;
@@ -28,9 +29,16 @@ export const StepShape = styled.div`
     fill: ${(props) => props.theme.colors.secondary};
     stroke: ${(props) => props.theme.colors.secondary};
   }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    width: 50%;
+    max-width: 50%;
+    flex-direction: column;
+  }
 `
 export const StepTexts = styled.div`
   text-align: center;
+  width: 90%;
 
   p {
     font-weight: ${(props) => props.theme.fontWeight.medium};
@@ -45,6 +53,12 @@ export const StepTexts = styled.div`
     color: ${(props) => props.theme.colors.primary};
     margin-bottom: 0;
   }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    p {
+      margin-bottom: ${rem(0)};
+    }
+  }
 `
 export const StepCol = styled(Col)`
   display: flex;
@@ -55,9 +69,20 @@ export const StepCol = styled(Col)`
   ${StepShape} {
     margin-bottom: ${rem(24)};
   }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    &:not(:last-child) {
+      margin-bottom: ${rem(56)};
+    }
+  }
 `
 export const ShapesRow = styled(Row)`
+  align-items: flex-start;
   margin-bottom: ${rem(120)};
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    margin-bottom: ${rem(64)};
+  }
 `
 
 export const Wrapper = styled.section`

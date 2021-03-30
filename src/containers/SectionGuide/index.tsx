@@ -55,7 +55,7 @@ const Shapes: React.FC = () => {
   ]
 
   return (
-    <Row>
+    <>
       {stepsData.map((step, index) => {
         return (
           <S.StepCol xs={12} sm={3} key={index}>
@@ -67,7 +67,7 @@ const Shapes: React.FC = () => {
           </S.StepCol>
         )
       })}
-    </Row>
+    </>
   )
 }
 
@@ -82,9 +82,7 @@ const SectionGuide: React.FC = () => {
         </Col>
       </S.HeroRow>
       <S.ShapesRow center="xs">
-        <Col xs={12}>
-          <Shapes />
-        </Col>
+        <Shapes />
       </S.ShapesRow>
 
       <Row center="xs">
