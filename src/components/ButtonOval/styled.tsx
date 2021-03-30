@@ -32,7 +32,7 @@ export const Wrapper = styled.div<ShapeProps>`
   ${(props) =>
     props.shapeType === "video-play" &&
     css`
-      padding: 0 ${rem(12)};
+      padding: 0 ${rem(6)};
 
       ${Shape} {
         top: calc(50% + 8px);
@@ -46,9 +46,9 @@ export const Wrapper = styled.div<ShapeProps>`
   ${(props) =>
     props.shapeType === "landing-copy" &&
     css`
-      ${Shape} {
-        top: calc(50% + 8px);
+      padding: 0 ${rem(2)};
 
+      ${Shape} {
         svg {
           transform: rotate(45deg);
         }
