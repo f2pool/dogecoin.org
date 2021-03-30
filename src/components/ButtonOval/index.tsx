@@ -10,7 +10,7 @@ import OvalPointy from "../../assets/shapes/oval-pointy.svg"
  * Types
  */
 interface OvalProps {
-  text?: string
+  text?: string | React.ReactNode
   textColor?: Color
   icon?: React.ReactNode | string | null
   shapeType?: S.ShapeType
@@ -39,7 +39,7 @@ const ButtonOval: React.FC<OvalProps> = ({
         backgroundColor={backgroundColor}
         href={href}
         onClick={onClick}
-        as={shapeType === "landing-copy" ? "div" : "button"}
+        as={shapeType === "landing-copy" ? "a" : "button"}
       />
       <S.Shape>
         <OvalShape />
