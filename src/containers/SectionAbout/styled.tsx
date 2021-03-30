@@ -13,16 +13,23 @@ export const Text = styled.p`
 `
 
 export const Wrapper = styled.section`
-  padding: ${rem(106)} 0;
   font-size: ${rem(32)};
   text-align: center;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
-  border-radius: ${rem(63)} ${rem(63)} 0 0;
+
+  &:first-child {
+    border-radius: ${rem(63)} ${rem(63)} 0 0;
+    padding-top: ${rem(106)};
+  }
+  &:last-child {
+    padding-bottom: ${rem(106)};
+  }
 `
 
 export const ImageStack = styled.div`
-  margin: 20vh 0;
+  padding: 20vh 0;
+  background-color: ${(props) => props.theme.colors.primary};
 `
 
 export const HashtagStack = styled.div`
