@@ -5,6 +5,7 @@ import Layout from "../core/Layout"
 import Main from "../components/Main"
 import SectionLead from "../containers/SectionLead"
 import SectionAbout from "../containers/SectionAbout"
+import SectionGuide from "../containers/SectionGuide"
 
 const Home: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const Home: React.FC = () => {
       <Main>
         <SectionLead />
         <SectionAbout />
+        <SectionGuide />
       </Main>
     </Layout>
   )
