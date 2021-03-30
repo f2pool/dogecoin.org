@@ -45,35 +45,51 @@ export const Main = styled.button<ButtonProps>`
     cursor: pointer;
   }
 
+  svg path {
+    fill: ${(props) => props.theme.colors.primary};
+  }
+
   // bg and text colors
   ${(props) =>
     props.backgroundColor === "white" &&
     css`
       background-color: ${props.theme.colors.white};
     `}
+
   ${(props) =>
     props.backgroundColor === "mint" &&
     css`
       background-color: ${props.theme.colors.mint};
     `}
+
   ${(props) =>
     props.backgroundColor === "background" &&
     props.textColor !== "accent" &&
     css`
       background-color: ${props.theme.colors.background};
     `}
+
   ${(props) =>
     props.backgroundColor === "background" &&
     props.textColor === "accent" &&
     css`
       color: ${props.theme.colors.accent};
       background-color: ${props.theme.colors.background};
+
+      svg path {
+        fill: ${(props) => props.theme.colors.accent};
+      }
     `}
+
   ${(props) =>
     props.backgroundColor === "odd" &&
     css`
       color: ${props.theme.colors.accent};
       background-color: ${props.theme.colors.odd};
+
+      svg path {
+        fill: ${(props) => props.theme.colors.accent};
+      }
     `}
 
   // icons
@@ -100,11 +116,13 @@ export const Main = styled.button<ButtonProps>`
         }
       }
     `}
+
   ${(props) =>
     props.layout === "space-between" &&
     css`
       justify-content: space-between;
     `}
+
   ${(props) =>
     props.$textFirst &&
     props.$icon &&

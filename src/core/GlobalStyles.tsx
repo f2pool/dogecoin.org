@@ -54,6 +54,12 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  h2 {
+    margin-bottom: ${rem(56)};
+    letter-spacing: -0.026em;
+    font-size: ${(props) => rem(props.theme.fontSize.h1)};
+  }
+
   button {
     background-color: transparent;
     border: none;
