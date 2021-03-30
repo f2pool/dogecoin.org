@@ -54,6 +54,11 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+  }
+
   * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
