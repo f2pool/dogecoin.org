@@ -2,7 +2,7 @@ import React from "react"
 import { Row, Col } from "react-styled-flexboxgrid"
 
 import Section from "../../components/Section"
-
+import Carousel from "../../components/Carousel"
 import { useFormatMessages } from "../../utils/hooks"
 
 import * as S from "./styled"
@@ -26,7 +26,9 @@ const SectionAbout: React.FC = () => {
           <S.Title>{title}</S.Title>
           <S.Text>{text}</S.Text>
 
-          <S.ImageStack></S.ImageStack>
+          <S.ImageStack>
+            <Carousel />
+          </S.ImageStack>
 
           <S.HashtagStack>
             {hashtags.map((item, i) => (
