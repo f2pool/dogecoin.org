@@ -2,6 +2,7 @@ import React from "react"
 import { Row, Col } from "react-styled-flexboxgrid"
 
 import Section from "../../components/Section"
+import ButtonOval from "../../components/ButtonOval"
 import * as S from "./styled"
 
 const SectionLead: React.FC = () => {
@@ -12,6 +13,8 @@ const SectionLead: React.FC = () => {
           <S.Title>
             Much <span>Doge</span>
           </S.Title>
+          <ButtonOval text="Let's Wow" shapeType="landing-copy" />
+          <ButtonOval text="Video" icon="play" shapeType="video-play" />
         </Col>
         <Col xs={12} sm={6}>
           {/* DOGE */}
