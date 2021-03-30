@@ -7,7 +7,7 @@
     "format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}'",
     "eslint": "eslint 'src/**/*.ts?(x)'",
     "start": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build --prefix-paths"
   },
   "repository": {
     "type": "git",
