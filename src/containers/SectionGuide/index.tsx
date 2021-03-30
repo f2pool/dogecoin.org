@@ -74,8 +74,6 @@ const Shapes: React.FC = () => {
 const SectionGuide: React.FC = () => {
   const [title, ctaText] = useFormatMessages([{ id: "GUIDE_TITLE" }, { id: "GUIDE_CTA_TEXT" }])
 
-  console.log(ctaText)
-
   return (
     <Section as={S.Wrapper}>
       <S.HeroRow center="xs">
