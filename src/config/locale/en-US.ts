@@ -1,11 +1,11 @@
 export default {
-  ABOUT_TITLE: "What is Doge?",
+  ABOUT_TITLE: "What is DIP-1337?",
   LEAD_BUTTON_TEXT_1: "Let’s Wow",
   LEAD_BUTTON_TEXT_2: "Video",
   ABOUT_TEXT_LEAD:
-    "Dogecoin is the cryptocurrency of the community. It is built with an open-source and decentralized blockchain to power fast payment transactions. The Shiba Inu pup is our endearing mascot of Doge.",
+    "102 whales such hodl, shibe need loot.",
   ABOUT_TEXT:
-    "The Doge community is first and foremost fun and welcoming. Originally started as a fun project by Billy Markus and Jackson Palmer, Dogecoin is now one of the most popular cryptocurrencies in the world with the best community in the world. We’ve come a long way. Much wow.",
+    "shibe add little paw to zapzap coins, give to smol hodl, is gud. shibe ask french cousin for big people talk. jacques very brain, warrior priest, revolutionary, much write. cousin eat rich, much tasty. shibes eat rich too? snacc on rich, make much random, bring coins back. ask zapzap car man, vote for sploot? shibe will ride shiny truck, such wag.",
   GUIDE_TITLE: "It is very easy to start using Dogecoin",
   GUIDE_STEP_1_SUBTITLE: "STEP 1",
   GUIDE_STEP_1_TITLE: "Get a Wallet",
