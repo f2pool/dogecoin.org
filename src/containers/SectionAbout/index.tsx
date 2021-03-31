@@ -28,7 +28,7 @@ const SectionAbout: React.FC = () => {
 
   return (
     <>
-      <Section as={S.WrapperFirst}>
+      <Section as={S.WrapperFirst} id="about">
         <Row center="xs">
           <Col xs={12} sm={8} md={7}>
             <S.Title>{title}</S.Title>

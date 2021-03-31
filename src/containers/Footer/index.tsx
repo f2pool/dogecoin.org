@@ -3,19 +3,22 @@ import { withPrefix } from "gatsby"
 import { Grid, Row, Col } from "react-styled-flexboxgrid"
 
 import { useFormatMessages } from "../../utils/hooks"
-import { IconIntercom, IconTelegram, IconTwitter } from "../../icons"
+import { IconGithub, IconFacebook, IconTwitter } from "../../icons"
 import Banner from "../../components/Banner"
 import Button from "../../components/Button"
 import ButtonOval from "../../components/ButtonOval"
 import Oval from "../../assets/shapes/oval"
 
+import { SOCIAL_LINKS } from "../../utils/const"
+
 import * as S from "./styled"
 
 const Footer: React.FC = () => {
-  const [textUs, followUs, footerOr] = useFormatMessages([
+  const [textUs, followUs, footerOr, gettingStarted] = useFormatMessages([
     { id: "FOOTER_TEXT_US" },
     { id: "FOOTER_FOLLOW_US" },
     { id: "FOOTER_OR" },
+    { id: "GETTING_STARTED_TITLE" },
   ])
 
   return (
@@ -32,11 +35,11 @@ const Footer: React.FC = () => {
 
                 <S.ButtonRow>
                   <Button
-                    href="mailto:random@email.com"
-                    text="halp@dogecoin.org"
+                    text={gettingStarted}
                     fullWidth
                     layout="center"
                     backgroundColor="background"
+                    href="/getting-started"
                     icon={
                       <img
                         src={withPrefix("/images/doge-puppy.png")}
@@ -50,12 +53,12 @@ const Footer: React.FC = () => {
                 <S.ButtonRow>
                   <Button
                     href="#"
-                    text="Intercom"
+                    text="Github"
                     fullWidth
                     layout="center"
                     textColor="accent"
                     backgroundColor="background"
-                    icon={<IconIntercom />}
+                    icon={<IconGithub />}
                   />
                 </S.ButtonRow>
 
@@ -70,19 +73,19 @@ const Footer: React.FC = () => {
 
               <S.ShapesWrapper>
                 <ButtonOval
-                  icon={<IconTelegram />}
+                  icon={<IconFacebook />}
                   textColor="accent"
                   shapeColor="#C3F1FF"
                   shapeRotate={120}
                   shapeType="telegram"
-                  href="#"
+                  href={SOCIAL_LINKS.facebook}
                 />
                 <ButtonOval
-                  href="#"
                   icon={<IconTwitter />}
                   shapeColor="#98EDE3"
                   shapeType="twitter"
                   textColor="primary"
+                  href={SOCIAL_LINKS.twitter}
                 />
 
                 {/* TODO: add all other social links */}

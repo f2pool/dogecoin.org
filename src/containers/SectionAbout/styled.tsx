@@ -42,7 +42,7 @@ export const ImageStack = styled.div`
     padding: ${rem(24)} 0;
 
     img {
-      border-radius: ${rem(8)};
+      border-radius: ${rem(24)};
     }
   }
 `
@@ -70,11 +70,11 @@ export const Media = styled.div`
   margin: 0 auto ${rem(74)};
   width: ${rem(683)};
   overflow: hidden;
-  border-radius: ${rem(12)};
+  border-radius: ${rem(24)};
   font-size: 0;
 
   img {
-    border-radius: ${rem(12)};
+    border-radius: ${rem(24)};
     max-width: 100%;
   }
 `

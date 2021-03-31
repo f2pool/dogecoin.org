@@ -27,7 +27,7 @@ export const ShapesWrapper = styled.div`
   justify-content: center;
 
   & > div:first-child {
-    transform: translate3d(${rem(20)}, 0, 0);
+    margin-right: ${rem(-20)};
   }
 `
 
