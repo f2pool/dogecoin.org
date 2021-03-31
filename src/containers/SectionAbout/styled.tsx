@@ -14,6 +14,12 @@ export const Text = styled.div`
 export const LeadText = styled.div`
   font-size: ${rem(40)};
   margin-bottom: ${rem(48)};
+
+  @media all and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 19px;
+  }
 `
 
 const WrapperBase = styled.section`
@@ -33,6 +39,10 @@ export const WrapperLast = styled(WrapperBase)``
 export const BannerContainer = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   padding: ${rem(80)} 0;
+
+  @media all and (max-width: 767px) {
+    padding: 20px 0;
+  }
 `
 
 export const ImageStack = styled.div`
@@ -43,6 +53,16 @@ export const ImageStack = styled.div`
 
     img {
       border-radius: ${rem(24)};
+    }
+  }
+
+  @media all and (max-width: 767px) {
+    .ticker__element {
+      padding: 8px 0;
+
+      img {
+        border-radius: 12px;
+      }
     }
   }
 `
@@ -71,10 +91,20 @@ export const Media = styled.div`
   width: ${rem(683)};
   overflow: hidden;
   border-radius: ${rem(24)};
+  max-width: 100%;
   font-size: 0;
 
   img {
     border-radius: ${rem(24)};
     max-width: 100%;
+  }
+
+  @media all and (max-width: 767px) {
+    margin-bottom: 45px;
+    border-radius: 12px;
+
+    img {
+      border-radius: 12px;
+    }
   }
 `

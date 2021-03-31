@@ -28,7 +28,17 @@ const SectionLead: React.FC = () => {
           </Decor>
         ))}
       </>
-      <Row middle="sm" style={{ height: "100%" }}>
+      <Row middle="sm" reverse="sm" style={{ height: "100%" }}>
+        <Col xs={12} sm={6}>
+          <S.Doge onDragStart={() => setDragStart(true)} onDragEnd={() => setDragStart(false)}>
+            <S.Circle style={{ zIndex: dragStart ? 2 : "auto" }}>
+              <img src={withPrefix("/images/doge.png")} alt="Much Doge" width="637px" />
+            </S.Circle>
+            <S.Glasses>
+              <img src={withPrefix("/images/deal-with-it.svg")} alt="Glasses" width="400px" />
+            </S.Glasses>
+          </S.Doge>
+        </Col>
         <Col xs={12} sm={6}>
           <S.Title>
             <span>Much</span>
@@ -42,18 +52,9 @@ const SectionLead: React.FC = () => {
               shapeType="video-play"
               shapeColor="#98EDE3"
               shapeRotate={170}
+              href="https://youtu.be/_KVZmS_UO5I"
             />
           </S.ShapesWrapper>
-        </Col>
-        <Col xs={12} sm={6}>
-          <S.Doge onDragStart={() => setDragStart(true)} onDragEnd={() => setDragStart(false)}>
-            <S.Circle style={{ zIndex: dragStart ? 2 : "auto" }}>
-              <img src={withPrefix("/images/doge.png")} alt="Much Doge" width="637px" />
-            </S.Circle>
-            <S.Glasses>
-              <img src={withPrefix("/images/deal-with-it.svg")} alt="Glasses" width="400px" />
-            </S.Glasses>
-          </S.Doge>
         </Col>
       </Row>
     </Section>

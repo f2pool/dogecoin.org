@@ -15,6 +15,10 @@ export const Footer = styled.footer`
     line-height: ${rem(64)};
     margin: 0 auto ${rem(36)};
   }
+
+  @media all and (max-width: 767px) {
+    padding-top: 50px;
+  }
 `
 
 export const Wrapper = styled.div`
@@ -76,5 +80,9 @@ export const ShapesWrapper = styled.div`
 
   > * {
     margin: 0 ${rem(8)} ${rem(16)};
+  }
+
+  @media all and (max-width: 767px) {
+    max-width: 280px;
   }
 `

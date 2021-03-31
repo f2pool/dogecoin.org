@@ -33,6 +33,10 @@ export const Card = styled.a`
   font-weight: ${(props) => props.theme.fontWeight.bold};
   text-align: center;
 
+  ${OvalWrapper} {
+    transition: transform 0.3s ease;
+  }
+
   ${(props) =>
     props.color === "accent" &&
     css`
@@ -46,8 +50,13 @@ export const Card = styled.a`
       }
       ${OvalWrapper} {
         transform: translate3d(-6px, 4px, 0);
+
+        &:hover {
+          transform: scale(1.02) translate3d(-6px, 4px, 0) rotate(3deg);
+        }
       }
     `}
+
   ${(props) =>
     props.color === "black" &&
     css`
@@ -61,8 +70,13 @@ export const Card = styled.a`
       }
       ${OvalWrapper} {
         transform: translate3d(-4px, 4px, 0);
+
+        &:hover {
+          transform: scale(1.02) translate3d(-4px, 4px, 0) rotate(-6deg);
+        }
       }
     `}
+
   ${(props) =>
     props.color === "secondary" &&
     css`
@@ -71,6 +85,10 @@ export const Card = styled.a`
 
       ${OvalWrapper} {
         transform: translate3d(-4px, 4px, 0);
+
+        &:hover {
+          transform: scale(1.026) translate3d(-4px, 4px, 0) rotate(-10deg);
+        }
       }
     `}
 `

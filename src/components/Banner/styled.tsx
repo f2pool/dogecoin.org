@@ -55,5 +55,13 @@ export const Wrapper = styled.div<WrapperProps>`
       ${Text}:after {
         display: none;
       }
+
+      @media all and (max-width: 767px) {
+        font-size: 40px;
+
+        .ticker {
+          height: 40px !important;
+        }
+      }
     `}
 `

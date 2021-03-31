@@ -13,4 +13,8 @@ export const SlideWrapper = styled.div`
   &:hover {
     transform: translate(0, -5px);
   }
+
+  @media all and (max-width: 767px) {
+    margin-right: 8px;
+  }
 `
