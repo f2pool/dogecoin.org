@@ -2,11 +2,12 @@ import React from "react"
 
 interface Props {
   $color?: string
+  $strokeColor?: string
   $type?: number | string
   $rotate?: number | string
 }
 
-const OvalStroke: React.FC<Props> = ({ $color = "#FFD203", $type = 1, $rotate = 0 }: Props) => {
+const OvalStroke: React.FC<Props> = ({ $color = "#FFD203", $strokeColor = "none", $type = 1, $rotate = 0 }: Props) => {
   if ($type === 2) {
     return (
       <svg viewBox="0 0 67 71" version="1.1" style={{ transform: `rotate(${$rotate}deg)` }}>
@@ -23,6 +24,26 @@ const OvalStroke: React.FC<Props> = ({ $color = "#FFD203", $type = 1, $rotate = 
         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
           <g transform="translate(-251.000000, -560.000000)" fill={$color}>
             <path d="M434.882381,679.566247 C419.65756,716.062179 377.675561,738.851133 337.839687,736.488992 C298.003812,734.12685 260.40058,706.506774 252.925828,674.449353 C245.557917,642.47845 268.191323,605.790327 302.16434,583.061174 C336.223874,560.22518 381.32282,551.281962 409.885251,571.934744 C438.361164,592.694367 450.000362,642.983796 434.882381,679.566247 Z"></path>
+          </g>
+        </g>
+      </svg>
+    )
+  }
+
+  // button bubble
+  if ($type === 4) {
+    return (
+      <svg width="90" height="100" viewBox="0 0 90 100" version="1.1" style={{ transform: `rotate(${$rotate}deg)` }}>
+        <g fill="none" fill-rule="evenodd" opacity=".08">
+          <g stroke={$strokeColor} stroke-width="3">
+            <g>
+              <g>
+                <path
+                  d="M82.652 40.884c5.772 19.634 4.54 39.118-7.312 48.557-11.775 9.44-34.247 8.76-51.101-2.492C7.307 75.622-4.083 53.646 1.38 34.389 6.845 15.133 29.241-1.48 46.788.105c17.47 1.51 30.169 21.22 35.864 40.779z"
+                  transform="translate(-370 -4433) translate(167 4140) translate(205 295)"
+                />
+              </g>
+            </g>
           </g>
         </g>
       </svg>

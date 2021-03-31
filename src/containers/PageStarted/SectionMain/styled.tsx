@@ -4,6 +4,10 @@ import { Row, Col } from "react-styled-flexboxgrid"
 
 export const Wrapper = styled.div`
   background-color: ${(props) => props.theme.colors.background};
+
+  &:not(:last-child) {
+    padding-bottom: ${rem(160)};
+  }
 `
 export const RadiusWrapper = styled(Wrapper)`
   padding-top: ${rem(170)};
@@ -34,5 +38,42 @@ export const TabsCol = styled(Col)`
   }
   &:last-child {
     padding-left: ${rem(24)};
+  }
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    &:first-child {
+      padding: 0;
+    }
+    &:last-child {
+      padding: 0;
+    }
+  }
+`
+export const CardsContainerCol = styled(Col)`
+  max-width: 100%;
+`
+export const CardsRow = styled(Row)`
+  max-width: 100%;
+  a {
+    height: 100%;
+  }
+
+  ${Col} {
+    margin-bottom: ${rem(40)};
+
+    &:nth-child(odd) {
+      padding-right: ${rem(24)};
+    }
+    &:nth-child(even) {
+      padding-left: ${rem(24)};
+    }
+
+    @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+      &:nth-child(odd) {
+        padding: 0;
+      }
+      &:nth-child(even) {
+        padding: 0;
+      }
+    }
   }
 `

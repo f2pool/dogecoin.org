@@ -5,7 +5,8 @@ import { useFormatMessages } from "../../../utils/hooks"
 
 import Section from "../../../components/Section"
 import BlockStepLead from "../../../components/BlockStepLead"
-import { stepOneButtons } from "./data"
+import CardBoxLink from "../../../components/CardBoxLink"
+import { stepOneButtons, stepTwoButtons } from "./data"
 import * as S from "./styled"
 
 interface TabsGroupBase {
@@ -35,32 +36,85 @@ const TabsGroup: React.FC<TabsGroupProps> = ({ groups }) => {
 }
 
 const SectionMain: React.FC = () => {
-  const [title, officialWalletTitle, officialWalletSubtitle, altWalletTitle, altWalletSubtitle] = useFormatMessages([
+  const [
+    titleOne,
+    officialWalletTitle,
+    officialWalletSubtitle,
+    altWalletTitle,
+    altWalletSubtitle,
+    titleTwo,
+    cardTitleOne,
+    cardTitleTwo,
+    cardTitleThree,
+  ] = useFormatMessages([
     { id: "GUIDE_STEP_1_SECTION_TITLE" },
     { id: "WALLET_OFFICIAL_TITLE" },
     { id: "WALLET_OFFICIAL_SUBTITLE" },
     { id: "WALLET_ALT_TITLE" },
     { id: "WALLET_ALT_SUBTITLE" },
+    { id: "GUIDE_STEP_2_SECTION_TITLE" },
+    { id: "GUIDE_STEP_3_CARD_ONE" },
+    { id: "GUIDE_STEP_3_CARD_TWO" },
+    { id: "GUIDE_STEP_3_CARD_THREE" },
   ])
 
   return (
-    <Section as={S.RadiusWrapper}>
-      <BlockStepLead step={1} title={title} />
-      <TabsGroup
-        groups={[
-          {
-            title: officialWalletTitle,
-            subtitle: officialWalletSubtitle,
-            buttonGroup: stepOneButtons[0],
-          },
-          {
-            title: altWalletTitle,
-            subtitle: altWalletSubtitle,
-            buttonGroup: stepOneButtons[1],
-          },
-        ]}
-      />
-    </Section>
+    <>
+      <Section as={S.RadiusWrapper}>
+        <BlockStepLead step={1} title={titleOne} />
+        <TabsGroup
+          groups={[
+            {
+              title: officialWalletTitle,
+              subtitle: officialWalletSubtitle,
+              buttonGroup: stepOneButtons[0],
+            },
+            {
+              title: altWalletTitle,
+              subtitle: altWalletSubtitle,
+              buttonGroup: stepOneButtons[1],
+            },
+          ]}
+        />
+      </Section>
+
+      <Section as={S.Wrapper}>
+        <BlockStepLead step={2} title={titleTwo} />
+        <TabsGroup
+          groups={[
+            {
+              buttonGroup: stepTwoButtons[0],
+            },
+            {
+              buttonGroup: stepTwoButtons[1],
+            },
+          ]}
+        />
+      </Section>
+
+      <Section as={S.Wrapper}>
+        <BlockStepLead step={3} />
+        <Row center="xs">
+          <S.CardsContainerCol md={12} lg={8}>
+            <S.CardsRow>
+              <Col xs={12} md={6} lg={6}>
+                <CardBoxLink color="accent" text={cardTitleOne} link="https://bitpay.com/blog/spend-dogecoin/" />
+              </Col>
+              <Col xs={12} md={6} lg={6}>
+                <CardBoxLink
+                  color="black"
+                  text={cardTitleTwo}
+                  link=" https://twitter.com/SnoopDogg/status/1375587797474504707"
+                />
+              </Col>
+              <Col xs={12} md={6} lg={6}>
+                <CardBoxLink color="secondary" text={cardTitleThree} link="https://www.spendyourdogecoins.cf/" />
+              </Col>
+            </S.CardsRow>
+          </S.CardsContainerCol>
+        </Row>
+      </Section>
+    </>
   )
 }
 

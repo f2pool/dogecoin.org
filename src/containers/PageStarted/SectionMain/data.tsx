@@ -9,8 +9,6 @@ import IconRobinhood from "../../../icons/IconRobinhood"
 import IconKraken from "../../../icons/IconKraken"
 import IconBinance from "../../../icons/IconBinance"
 import IconFtx from "../../../icons/IconFtx"
-// import IconMultidoge from "../../../assets/images/multidoge-icon.png"
-// import IconDogecoin from "../../../assets/images/dogecoin-icon.png"
 
 const TabButton = ({ icon, text, link }: { icon: React.ReactNode; text: string; link: string }) => {
   return <Button icon={icon} text={text} layout="center" backgroundColor="black" href={link} fullWidth />
@@ -34,5 +32,16 @@ export const stepOneButtons = [
     <TabButton icon={<IconExodus />} text="Exodus" link="https://www.exodus.com/dogecoin-wallet" />,
     <TabButton icon={<IconLedger />} text="Ledger" link="https://www.ledger.com/" />,
     <TabButton icon={<IconRobinhood />} text="Robinhood" link="https://robinhood.com/us/en/" />,
+  ],
+]
+
+export const stepTwoButtons = [
+  [
+    <TabButton icon={<IconRobinhood />} text="Robinhood" link="https://robinhood.com/us/en/" />,
+    <TabButton icon={<IconKraken />} text="Kraken" link="https://www.kraken.com/" />,
+  ],
+  [
+    <TabButton icon={<IconBinance />} text="Binance" link="https://www.binance.com/en" />,
+    <TabButton icon={<IconFtx />} text="FTX" link="https://ftx.com/" />,
   ],
 ]
