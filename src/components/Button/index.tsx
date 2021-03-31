@@ -7,7 +7,7 @@ import * as S from "./styled"
  * Types
  */
 interface ButtonProps {
-  text: React.ReactNode | string
+  text?: React.ReactNode | string
   textColor?: S.Color
   icon?: React.ReactNode | string | null
   textFirst?: boolean
@@ -18,6 +18,7 @@ interface ButtonProps {
   fullWidth?: boolean
   onClick?: Function | null
   anchor?: boolean
+  bordered?: boolean
   as?: any // TODO
 }
 
@@ -27,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({
   icon = null,
   textFirst = false,
   backgroundColor = "transparent",
+  bordered = false,
   layout = "initial",
   href = null,
   gatsbyLink = false,
@@ -49,6 +51,7 @@ const Button: React.FC<ButtonProps> = ({
         $icon={icon !== null}
         $textFirst={textFirst}
         $fullWidth={fullWidth}
+        $bordered={bordered}
         onClick={handleOnClick}
       >
         <Link to={href}>
@@ -66,6 +69,7 @@ const Button: React.FC<ButtonProps> = ({
       layout={layout}
       $icon={icon !== null}
       $textFirst={textFirst}
+      $bordered={bordered}
       $fullWidth={fullWidth}
       {...(href && {
         as: "a",

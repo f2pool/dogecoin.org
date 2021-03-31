@@ -28,6 +28,11 @@ export const Wrapper = styled.div<ShapeProps>`
   display: inline-block;
   position: relative;
 
+  a,
+  button {
+    transform: scale(1) !important;
+  }
+
   &:hover ${Shape} svg {
     transform: scale(1.01) rotate(160deg) !important;
   }
