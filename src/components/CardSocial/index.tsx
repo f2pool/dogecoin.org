@@ -8,7 +8,6 @@ import IconFacebook from "../../icons/IconFacebook"
 import IconGithub from "../../icons/IconGithubYellow"
 
 type SocialPlatform = "Reddit" | "Twitter" | "Discord" | "Facebook" | "Subreddit" | "Github"
-
 interface CardSocialProps {
   type: SocialPlatform
   link: string
