@@ -22,7 +22,7 @@ export const Title = styled.h2`
 const BlockStepLead: React.FC<BlockStepLeadProps> = ({ step, title }) => {
   return (
     <Row center="xs">
-      <Col xs={12} md={8}>
+      <Col xs={12} md={8} lg={6}>
         <CardStep step={step} />
         {title && <Title>{title}</Title>}
       </Col>

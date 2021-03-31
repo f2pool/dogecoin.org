@@ -5,7 +5,7 @@ import { rem } from "polished"
  * Types
  */
 export type Color = "primary" | "accent" | "white"
-export type BgColor = "background" | "odd" | "white" | "mint" | "primary" | "transparent"
+export type BgColor = "background" | "odd" | "white" | "mint" | "primary" | "black" | "transparent"
 export type Layout = "initial" | "space-between" | "center"
 
 interface ButtonProps {
@@ -55,6 +55,12 @@ export const Main = styled.button<ButtonProps>`
     props.backgroundColor === "white" &&
     css`
       background-color: ${props.theme.colors.white};
+    `}
+  ${(props) =>
+    props.backgroundColor === "black" &&
+    css`
+      background-color: ${props.theme.colors.black};
+      color: ${props.theme.colors.white};
     `}
 
   ${(props) =>
