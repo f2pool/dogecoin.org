@@ -20,26 +20,34 @@ const SectionAbout: React.FC = () => {
   const [title, text] = useFormatMessages([{ id: "ABOUT_TITLE" }, { id: "ABOUT_TEXT" }])
 
   return (
-    <Section as={S.Wrapper}>
-      <Row center="xs">
-        <Col xs={12} sm={8}>
-          <S.Title>{title}</S.Title>
-          <S.Text dangerouslySetInnerHTML={{ __html: text }} />
+    <>
+      <Section as={S.Wrapper}>
+        <Row center="xs">
+          <Col xs={12} sm={8}>
+            <S.Title>{title}</S.Title>
+            <S.Text dangerouslySetInnerHTML={{ __html: text }} />
+          </Col>
+        </Row>
+      </Section>
 
-          <S.ImageStack>
-            <Carousel />
-          </S.ImageStack>
+      <S.ImageStack>
+        <Carousel />
+      </S.ImageStack>
 
-          <S.HashtagStack>
-            {hashtags.map((item, i) => (
-              <S.Hashtag key={i} style={{ backgroundColor: item.bg, color: item.color }}>
-                #{item.text}
-              </S.Hashtag>
-            ))}
-          </S.HashtagStack>
-        </Col>
-      </Row>
-    </Section>
+      <Section as={S.Wrapper}>
+        <Row center="xs">
+          <Col xs={12} sm={8}>
+            <S.HashtagStack>
+              {hashtags.map((item, i) => (
+                <S.Hashtag key={i} style={{ backgroundColor: item.bg, color: item.color }}>
+                  #{item.text}
+                </S.Hashtag>
+              ))}
+            </S.HashtagStack>
+          </Col>
+        </Row>
+      </Section>
+    </>
   )
 }
 

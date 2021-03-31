@@ -1,7 +1,9 @@
 import styled from "styled-components"
 import { rem } from "polished"
 
-export const Title = styled.h2``
+export const Title = styled.h2`
+  line-height: 0.95;
+`
 
 export const Text = styled.p`
   span {
@@ -28,7 +30,7 @@ export const Wrapper = styled.section`
 `
 
 export const ImageStack = styled.div`
-  padding: 20vh 0;
+  padding: ${rem(96)} 0 ${rem(120)} 0;
   background-color: ${(props) => props.theme.colors.primary};
 `
 
