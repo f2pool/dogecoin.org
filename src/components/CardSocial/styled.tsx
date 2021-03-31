@@ -21,7 +21,7 @@ export const IconWrapper = styled.div`
   }
 
   svg path {
-    fill: ${(props) => props.theme.colors.secondary};
+    fill: ${(props) => props.theme.colors.secondary} !important;
   }
 `
 export const Card = styled.a`

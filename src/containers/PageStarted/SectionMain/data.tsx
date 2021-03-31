@@ -2,13 +2,22 @@ import React from "react"
 import { withPrefix } from "gatsby"
 
 import Button from "../../../components/Button"
-import IconTrustwallet from "../../../icons/IconTrustwallet"
-import IconExodus from "../../../icons/IconExodus"
-import IconLedger from "../../../icons/IconLedger"
-import IconRobinhood from "../../../icons/IconRobinhood"
-import IconKraken from "../../../icons/IconKraken"
-import IconBinance from "../../../icons/IconBinance"
-import IconFtx from "../../../icons/IconFtx"
+import {
+  IconGithub,
+  IconReddit,
+  IconDiscord,
+  IconFacebook,
+  IconTwitter,
+  IconSubReddit,
+  IconTrustwallet,
+  IconExodus,
+  IconLedger,
+  IconRobinhood,
+  IconKraken,
+  IconFtx,
+  IconBinance,
+} from "../../../icons"
+import { LINKS } from "../../../utils/const"
 
 const TabButton = ({ icon, text, link }: { icon: React.ReactNode; text: string; link: string }) => {
   return <Button icon={icon} text={text} layout="center" backgroundColor="black" href={link} fullWidth />
@@ -47,10 +56,10 @@ export const stepTwoButtons = [
 ]
 
 export const stepFourLinks = [
-  { type: "Reddit", link: "https://www.reddit.com/r/dogecoin/" },
-  { type: "Twitter", link: "https://twitter.com/Dogecoin" },
-  { type: "Github", link: "https://github.com/dogecoin/dogecoin" },
-  { type: "Discord", link: "https://discord.gg/dogecoin" },
-  { type: "Subreddit", link: "https://www.reddit.com/r/dogeducation" },
-  { type: "Facebook", link: "https://facebook.com/OfficialDogecoin/" },
+  { type: "Reddit", link: LINKS.reddit, icon: <Button bordered icon={<IconReddit />} as="div" /> },
+  { type: "Twitter", link: LINKS.twitter, icon: <Button bordered icon={<IconTwitter />} as="div" /> },
+  { type: "Github", link: LINKS.discord, icon: <Button bordered icon={<IconDiscord />} as="div" /> },
+  { type: "Discord", link: LINKS.facebook, icon: <Button bordered icon={<IconFacebook />} as="div" /> },
+  { type: "Subreddit", link: LINKS.subreddit, icon: <Button bordered icon={<IconSubReddit />} as="div" /> },
+  { type: "Facebook", link: LINKS.github, icon: <Button bordered icon={<IconGithub />} as="div" /> },
 ]

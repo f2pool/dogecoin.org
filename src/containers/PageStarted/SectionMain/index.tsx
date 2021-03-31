@@ -3,9 +3,9 @@ import { Row, Col } from "react-styled-flexboxgrid"
 
 import { useFormatMessages } from "../../../utils/hooks"
 
-import Decor from "../../../components/Decor"
+// import Decor from "../../../components/Decor"
+// import PathLine from "../../../assets/shapes/path-line"
 import Section from "../../../components/Section"
-import PathLine from "../../../assets/shapes/path-line"
 import CardBoxLink from "../../../components/CardBoxLink"
 import CardSocial from "../../../components/CardSocial/index"
 import BlockStepLead from "../../../components/BlockStepLead"
@@ -134,7 +134,7 @@ const SectionMain: React.FC = () => {
             <S.SocialCardsRow>
               {stepFourLinks.map((card, index) => (
                 <Col xs={6} md={4} key={index}>
-                  <CardSocial type={card.type} link={card.link} />
+                  <CardSocial type={card.type} link={card.link} icon={card.icon} />
                 </Col>
               ))}
             </S.SocialCardsRow>

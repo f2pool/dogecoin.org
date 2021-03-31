@@ -47,6 +47,14 @@ export const TabsButtons = styled.div`
   svg path {
     fill: ${(props) => props.theme.colors.white} !important;
   }
+
+  a:hover {
+    svg,
+    img {
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+  }
 `
 export const TabsCol = styled(Col)`
   &:first-child {
