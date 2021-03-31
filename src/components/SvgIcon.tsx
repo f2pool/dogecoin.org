@@ -13,8 +13,6 @@ export interface SvgIconProps {
 }
 
 const SvgIcon = styled.svg<SvgIconProps>`
-  width: ${rem(20)};
-  height: ${rem(20)};
   display: inline-block;
   vertical-align: middle;
   margin-right: ${rem(10)};

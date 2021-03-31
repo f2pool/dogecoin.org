@@ -1,9 +1,12 @@
 import React from "react"
 import { Row, Col } from "react-styled-flexboxgrid"
 
+import { useFormatMessages } from "../../utils/hooks"
+
 import Section from "../../components/Section"
 import Button from "../../components/Button"
-import { useFormatMessages } from "../../utils/hooks"
+
+import { IconCart, IconWallet, IconDownload, IconKey } from "../../icons"
 
 import Oval from "../../assets/shapes/oval"
 
@@ -34,21 +37,25 @@ const Shapes: React.FC = () => {
       subtitle: stepOneSubtitle,
       title: stepOneTitle,
       shape: <Oval $type={2} />,
+      icon: <IconKey />,
     },
     {
       subtitle: stepTwoSubtitle,
       title: stepTwoTitle,
       shape: <Oval $type={2} $rotate={90} />,
+      icon: <IconWallet />,
     },
     {
       subtitle: stepThreeSubtitle,
       title: stepThreeTitle,
       shape: <Oval $rotate={145} />,
+      icon: <IconCart />,
     },
     {
       subtitle: stepFourSubtitle,
       title: stepFourTitle,
       shape: <Oval $type={3} $rotate={330} />,
+      icon: <IconDownload />,
     },
   ]
 
@@ -57,7 +64,10 @@ const Shapes: React.FC = () => {
       {stepsData.map((step, index) => {
         return (
           <S.StepCol xs={12} sm={3} key={index}>
-            <S.StepShape>{step.shape}</S.StepShape>
+            <S.StepShape>
+              {step.shape}
+              <S.Icon>{step.icon}</S.Icon>
+            </S.StepShape>
             <S.StepTexts>
               <p>{step.subtitle}</p>
               <h3>{step.title}</h3>

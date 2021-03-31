@@ -92,6 +92,7 @@ export const Main = styled.button<ButtonProps>`
         fill: ${(props) => props.theme.colors.accent};
       }
     `}
+
   ${(props) =>
     props.backgroundColor === "primary" &&
     css`
@@ -104,7 +105,8 @@ export const Main = styled.button<ButtonProps>`
   ${(props) =>
     props.$icon &&
     css`
-      ${Icon}:not(:only-child) {
+      svg:not(:only-child),
+      img:not(:only-child) {
         margin-right: ${rem(16)};
       }
     `}
@@ -118,7 +120,8 @@ export const Main = styled.button<ButtonProps>`
       position: relative;
 
       @media all and (min-width: 321px) {
-        ${Icon} {
+        svg,
+        img {
           position: absolute;
           left: var(--padding-vertical);
         }

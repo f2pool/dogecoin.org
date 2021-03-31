@@ -9,11 +9,13 @@ export const Title = styled.h2`
   text-align: center;
   color: ${(props) => props.theme.colors.primary};
 `
+
 export const HeroRow = styled(Row)`
   margin-bottom: ${rem(24)};
 `
 
 export const StepShape = styled.div`
+  position: relative;
   width: ${rem(144)};
   height: ${rem(144)};
   margin: 0 auto;
@@ -22,15 +24,17 @@ export const StepShape = styled.div`
   align-items: center;
   justify-content: center;
 
-  svg {
+  > svg {
     max-width: 100%;
     max-height: 100%;
+    position: relative;
   }
 
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
     flex-direction: column;
   }
 `
+
 export const StepTexts = styled.div`
   text-align: center;
 
@@ -58,6 +62,7 @@ export const StepTexts = styled.div`
     }
   }
 `
+
 export const StepCol = styled(Col)`
   display: flex;
   flex-direction: column;
@@ -85,4 +90,16 @@ export const ShapesRow = styled(Row)`
 
 export const Wrapper = styled.section`
   padding: ${rem(120)} 0;
+`
+
+export const Icon = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  svg {
+    width: ${rem(40)};
+    margin-right: 0;
+  }
 `
