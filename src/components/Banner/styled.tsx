@@ -17,20 +17,9 @@ export const Container = styled.div<WrapperProps>`
 `
 
 export const Text = styled.div`
-  padding-left: ${rem(80)};
-  position: relative;
 
-  &:after {
-    content: "";
-    width: ${rem(24)};
-    height: ${rem(24)};
-    position: absolute;
-    left: ${rem(40)};
-    top: 50%;
-    border-radius: 100px;
-    transform: translate(-50%, -50%);
-    background-color: ${(props) => props.theme.colors.white};
-  }
+  padding-left: ${rem(30)};
+  position: relative;
 `
 
 export const Wrapper = styled.div<WrapperProps>`
