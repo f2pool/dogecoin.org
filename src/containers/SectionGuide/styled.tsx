@@ -33,20 +33,23 @@ export const StepShape = styled.div`
 `
 export const StepTexts = styled.div`
   text-align: center;
-  width: 90%;
 
   p {
     font-weight: ${(props) => props.theme.fontWeight.medium};
     color: ${(props) => props.theme.colors.dark};
     opacity: 0.4;
-    margin-bottom: ${rem(8)};
+    margin-bottom: ${rem(15)};
+    font-size: ${rem(17)};
+    line-height: 1;
   }
+
   h3 {
     font-size: ${rem(32)};
     line-height: ${rem(36)};
     font-weight: ${(props) => props.theme.fontWeight.medium};
     color: ${(props) => props.theme.colors.primary};
-    margin-bottom: 0;
+    margin: 0 auto;
+    max-width: ${rem(200)};
   }
 
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {

@@ -48,7 +48,7 @@ const Shapes: React.FC = () => {
     {
       subtitle: stepFourSubtitle,
       title: stepFourTitle,
-      shape: <Oval $type={3} $rotate={80} />,
+      shape: <Oval $type={3} $rotate={330} />,
     },
   ]
 

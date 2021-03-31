@@ -32,7 +32,7 @@ export const WrapperLast = styled(WrapperBase)``
 
 export const BannerContainer = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
-  padding-bottom: ${rem(40)};
+  padding: ${rem(80)} 0;
 `
 
 export const ImageStack = styled.div`
@@ -64,4 +64,17 @@ export const Hashtag = styled.div`
   border-radius: 100px;
   font-size: ${rem(25)};
   font-weight: bold;
+`
+
+export const Media = styled.div`
+  margin: 0 auto ${rem(74)};
+  width: ${rem(683)};
+  overflow: hidden;
+  border-radius: ${rem(12)};
+  font-size: 0;
+
+  img {
+    border-radius: ${rem(12)};
+    max-width: 100%;
+  }
 `
