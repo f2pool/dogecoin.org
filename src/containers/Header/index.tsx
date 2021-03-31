@@ -2,6 +2,8 @@ import React from "react"
 import { withPrefix, Link } from "gatsby"
 import { Row, Col, Grid } from "react-styled-flexboxgrid"
 
+import IconArrowBack from "../../icons/IconArrowBack"
+
 import * as S from "./styled"
 
 interface HeaderProps {
@@ -25,7 +27,10 @@ const Header: React.FC<HeaderProps> = ({ isSimple = false }) => {
         {isSimple && (
           <S.SimpleHeaderRow center="xs">
             <Col xs={4}>
-              <Link to="/">{"<- Back"}</Link>
+              <Link to="/">
+                <IconArrowBack />
+                Back
+              </Link>
             </Col>
           </S.SimpleHeaderRow>
         )}

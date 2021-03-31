@@ -33,6 +33,10 @@ export const SimpleHeaderRow = styled(Row)`
     text-align: center;
   }
   a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: ${(props) => props.theme.colors.odd};
+    font-weight: ${(props) => props.theme.fontWeight.bold};
   }
 `

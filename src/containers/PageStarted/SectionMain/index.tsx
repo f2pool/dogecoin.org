@@ -6,7 +6,8 @@ import { useFormatMessages } from "../../../utils/hooks"
 import Section from "../../../components/Section"
 import BlockStepLead from "../../../components/BlockStepLead"
 import CardBoxLink from "../../../components/CardBoxLink"
-import { stepOneButtons, stepTwoButtons } from "./data"
+import CardSocial from "../../../components/CardSocial/index"
+import { stepOneButtons, stepTwoButtons, stepFourLinks } from "./data"
 import * as S from "./styled"
 
 interface TabsGroupBase {
@@ -46,6 +47,7 @@ const SectionMain: React.FC = () => {
     cardTitleOne,
     cardTitleTwo,
     cardTitleThree,
+    titleFour,
   ] = useFormatMessages([
     { id: "GUIDE_STEP_1_SECTION_TITLE" },
     { id: "WALLET_OFFICIAL_TITLE" },
@@ -56,6 +58,7 @@ const SectionMain: React.FC = () => {
     { id: "GUIDE_STEP_3_CARD_ONE" },
     { id: "GUIDE_STEP_3_CARD_TWO" },
     { id: "GUIDE_STEP_3_CARD_THREE" },
+    { id: "GUIDE_STEP_4_SECTION_TITLE" },
   ])
 
   return (
@@ -97,20 +100,36 @@ const SectionMain: React.FC = () => {
         <Row center="xs">
           <S.CardsContainerCol md={12} lg={8}>
             <S.CardsRow>
-              <Col xs={12} md={6} lg={6}>
+              <Col xs={12} md={6}>
                 <CardBoxLink color="accent" text={cardTitleOne} link="https://bitpay.com/blog/spend-dogecoin/" />
               </Col>
-              <Col xs={12} md={6} lg={6}>
+              <Col xs={12} md={6}>
                 <CardBoxLink
                   color="black"
                   text={cardTitleTwo}
                   link=" https://twitter.com/SnoopDogg/status/1375587797474504707"
                 />
               </Col>
-              <Col xs={12} md={6} lg={6}>
+              <Col xs={12} md={6}>
                 <CardBoxLink color="secondary" text={cardTitleThree} link="https://www.spendyourdogecoins.cf/" />
               </Col>
             </S.CardsRow>
+          </S.CardsContainerCol>
+        </Row>
+      </Section>
+
+      <Section as={S.Wrapper}>
+        <BlockStepLead step={4} title={titleFour} />
+
+        <Row center="xs">
+          <S.CardsContainerCol md={12} lg={8}>
+            <S.SocialCardsRow>
+              {stepFourLinks.map((card, index) => (
+                <Col xs={12} md={4} key={index}>
+                  <CardSocial type={card.type} link={card.link} />
+                </Col>
+              ))}
+            </S.SocialCardsRow>
           </S.CardsContainerCol>
         </Row>
       </Section>

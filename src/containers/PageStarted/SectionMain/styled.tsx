@@ -77,3 +77,13 @@ export const CardsRow = styled(Row)`
     }
   }
 `
+
+export const SocialCardsRow = styled(Row)`
+  justify-content: space-between;
+
+  ${Col} {
+    max-width: calc(100% / 3 - ${rem(24)});
+    padding: 0;
+    margin-bottom: ${rem(40)};
+  }
+`

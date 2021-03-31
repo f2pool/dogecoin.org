@@ -45,3 +45,12 @@ export const stepTwoButtons = [
     <TabButton icon={<IconFtx />} text="FTX" link="https://ftx.com/" />,
   ],
 ]
+
+export const stepFourLinks = [
+  { type: "Reddit", link: "https://www.reddit.com/r/dogecoin/" },
+  { type: "Twitter", link: "https://twitter.com/Dogecoin" },
+  { type: "Github", link: "https://github.com/dogecoin/dogecoin" },
+  { type: "Discord", link: "https://discord.gg/dogecoin" },
+  { type: "Subreddit", link: "https://www.reddit.com/r/dogeducation" },
+  { type: "Facebook", link: "https://facebook.com/OfficialDogecoin/" },
+]
