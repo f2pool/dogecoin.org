@@ -3,11 +3,17 @@ import { rem, rgba } from "polished"
 
 export const Title = styled.h1`
   text-align: center;
-  letter-spacing: -5px;
+  letter-spacing: ${rem(-5)};
   margin-bottom: ${rem(160)};
 
   span {
     display: block;
+  }
+
+  @media all and (max-width: 767px) {
+    font-size: 64px;
+    letter-spacing: -2.72px;
+    margin-bottom: 60px;
   }
 `
 
@@ -20,14 +26,23 @@ export const Wrapper = styled.section`
   > div {
     height: 100%;
   }
+
+  @media all and (max-width: 767px) {
+    height: auto;
+  }
 `
 
 export const ShapesWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
 
   & > div:first-child {
     margin-right: ${rem(-20)};
+  }
+
+  svg {
+    width: ${rem(32)};
   }
 `
 
@@ -36,6 +51,12 @@ export const Doge = styled.div`
   height: ${rem(637)};
   margin-left: auto;
   position: relative;
+
+  @media all and (max-width: 767px) {
+    width: 180px;
+    height: 180px;
+    margin-right: auto;
+  }
 `
 
 export const Circle = styled.div`
@@ -64,5 +85,11 @@ export const Glasses = styled.div`
     &:active {
       cursor: grabbing;
     }
+  }
+
+  @media all and (max-width: 767px) {
+    width: 106px;
+    top: 60px;
+    left: 28px;
   }
 `

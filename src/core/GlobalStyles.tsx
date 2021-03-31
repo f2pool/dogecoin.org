@@ -5,7 +5,13 @@ export const GlobalStyles = createGlobalStyle`
   ${normalize()};
 
   html {
+    @media all and (max-width: 1040px) {
+      font-size: 11px
+    }
 
+    @media all and (max-width: 767px) {
+      font-size: 9px
+    }
   }
 
   body {
@@ -49,8 +55,8 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1;
 
     @media all and (max-width: 767px) {
-      font-size: 24px;
-      margin-bottom: 6px;
+      font-size: 40px;
+      margin-bottom: 42px;
     }
   }
 
@@ -58,6 +64,11 @@ export const GlobalStyles = createGlobalStyle`
     margin-bottom: ${rem(56)};
     letter-spacing: -0.026em;
     font-size: ${(props) => rem(props.theme.fontSize.h1)};
+
+    @media all and (max-width: 767px) {
+      font-size: 40px;
+      margin-bottom: 42px;
+    }
   }
 
   button {
