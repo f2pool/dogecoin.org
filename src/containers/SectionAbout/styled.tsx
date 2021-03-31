@@ -5,32 +5,46 @@ export const Title = styled.h2`
   line-height: 0.95;
 `
 
-export const Text = styled.p`
-  span {
-    display: block;
-  }
-  span:not(:last-child) {
-    margin-bottom: ${rem(24)};
-  }
+export const Text = styled.div`
+  max-width: ${rem(816)};
+  margin-left: auto;
+  margin-right: auto;
+`
+
+export const LeadText = styled.div`
+  font-size: ${rem(40)};
+  margin-bottom: ${rem(48)};
 `
 
 const WrapperBase = styled.section`
-  font-size: ${rem(32)};
+  font-size: ${rem(24)};
   text-align: center;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
 `
+
 export const WrapperFirst = styled(WrapperBase)`
   border-radius: ${rem(63)} ${rem(63)} 0 0;
   padding-top: ${rem(106)};
 `
-export const WrapperLast = styled(WrapperBase)`
-  padding-bottom: ${rem(106)};
+
+export const WrapperLast = styled(WrapperBase)``
+
+export const BannerContainer = styled.div`
+  background-color: ${(props) => props.theme.colors.primary};
+  padding-bottom: ${rem(40)};
 `
 
 export const ImageStack = styled.div`
-  padding: ${rem(96)} 0 ${rem(120)} 0;
   background-color: ${(props) => props.theme.colors.primary};
+
+  .ticker__element {
+    padding: ${rem(24)} 0;
+
+    img {
+      border-radius: ${rem(8)};
+    }
+  }
 `
 
 export const HashtagStack = styled.div`
@@ -40,7 +54,7 @@ export const HashtagStack = styled.div`
   max-width: ${rem(680)};
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10vh;
+  margin-bottom: 4vh;
   flex-wrap: wrap;
 `
 

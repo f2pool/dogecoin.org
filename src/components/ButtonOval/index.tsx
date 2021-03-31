@@ -1,10 +1,10 @@
 import React from "react"
 import Button from "../Button"
-import { Color, BgColor } from "../Button/styled"
+import { Color } from "../Button/styled"
 
 import * as S from "./styled"
-import OvalSmooth from "../../assets/shapes/oval-smooth.svg"
-import OvalPointy from "../../assets/shapes/oval-pointy.svg"
+
+import Oval from "../../assets/shapes/oval"
 
 /**
  * Types
@@ -13,8 +13,9 @@ interface OvalProps {
   text?: string | React.ReactNode
   textColor?: Color
   icon?: React.ReactNode | string | null
+  shapeColor?: string
   shapeType?: S.ShapeType
-  backgroundColor?: BgColor
+  shapeRotate?: number | string
   href?: string | null
   onClick?: Function | null
 }
@@ -24,11 +25,12 @@ const ButtonOval: React.FC<OvalProps> = ({
   textColor = "primary",
   icon = null,
   shapeType = "landing-copy",
-  backgroundColor = "transparent",
   href = null,
   onClick = null,
+  shapeColor,
+  shapeRotate = 0,
 }: OvalProps) => {
-  const OvalShape = shapeType === "video-play" || shapeType === "telegram" ? OvalPointy : OvalSmooth
+  const shape = shapeType === "video-play" || shapeType === "telegram" ? 1 : 3
 
   return (
     <S.Wrapper shapeType={shapeType}>
@@ -36,13 +38,12 @@ const ButtonOval: React.FC<OvalProps> = ({
         text={text}
         textColor={textColor}
         icon={icon}
-        backgroundColor={backgroundColor}
         href={href}
         onClick={onClick}
         as={shapeType === "landing-copy" ? "a" : "button"}
       />
       <S.Shape>
-        <OvalShape />
+        <Oval $type={shape} $color={shapeColor} $rotate={shapeRotate} />
       </S.Shape>
     </S.Wrapper>
   )

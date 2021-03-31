@@ -9,6 +9,8 @@ import OvalRoundTwo from "../../assets/shapes/oval-round-2.svg"
 import OvalSmooth from "../../assets/shapes/oval-smooth.svg"
 import OvalPointy from "../../assets/shapes/oval-pointy.svg"
 
+import Oval from "../../assets/shapes/oval"
+
 import * as S from "./styled"
 
 const Shapes: React.FC = () => {
@@ -35,22 +37,22 @@ const Shapes: React.FC = () => {
     {
       subtitle: stepOneSubtitle,
       title: stepOneTitle,
-      shape: <OvalRoundOne />,
+      shape: <Oval $type={2} />,
     },
     {
       subtitle: stepTwoSubtitle,
       title: stepTwoTitle,
-      shape: <OvalRoundTwo />,
+      shape: <Oval $type={2} $rotate={90} />,
     },
     {
       subtitle: stepThreeSubtitle,
       title: stepThreeTitle,
-      shape: <OvalPointy />,
+      shape: <Oval $rotate={145} />,
     },
     {
       subtitle: stepFourSubtitle,
       title: stepFourTitle,
-      shape: <OvalSmooth />,
+      shape: <Oval $type={3} $rotate={80} />,
     },
   ]
 

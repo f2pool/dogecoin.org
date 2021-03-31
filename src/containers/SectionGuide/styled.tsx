@@ -14,25 +14,20 @@ export const HeroRow = styled(Row)`
 `
 
 export const StepShape = styled.div`
-  width: 40%;
-  max-width: 40%;
-  height: 120px;
-  max-height: 120px;
+  width: ${rem(144)};
+  height: ${rem(144)};
   margin: 0 auto;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  svg path {
-    height: 100%;
-    fill: ${(props) => props.theme.colors.secondary};
-    stroke: ${(props) => props.theme.colors.secondary};
+  svg {
+    max-width: 100%;
+    max-height: 100%;
   }
 
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
-    width: 50%;
-    max-width: 50%;
     flex-direction: column;
   }
 `
