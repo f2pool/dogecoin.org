@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import * as S from "./styled"
 
@@ -13,6 +14,7 @@ interface ButtonProps {
   backgroundColor?: S.BgColor
   layout?: S.Layout
   href?: string | null
+  gatsbyLink?: boolean
   fullWidth?: boolean
   onClick?: Function | null
   as?: any // TODO
@@ -26,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({
   backgroundColor = "transparent",
   layout = "initial",
   href = null,
+  gatsbyLink = false,
   fullWidth = false,
   onClick = null,
   as = "button",
@@ -33,6 +36,25 @@ const Button: React.FC<ButtonProps> = ({
   const handleOnClick = (): void => {
     if (!onClick) return
     onClick()
+  }
+
+  if (gatsbyLink && href) {
+    return (
+      <S.Main
+        textColor={textColor}
+        backgroundColor={backgroundColor}
+        layout={layout}
+        $icon={icon !== null}
+        $textFirst={textFirst}
+        $fullWidth={fullWidth}
+        onClick={handleOnClick}
+      >
+        <Link to={href}>
+          {icon}
+          {text && <span>{text}</span>}
+        </Link>
+      </S.Main>
+    )
   }
 
   return (
