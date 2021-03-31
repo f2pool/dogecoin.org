@@ -14,19 +14,18 @@ export const Text = styled.p`
   }
 `
 
-export const Wrapper = styled.section`
+const WrapperBase = styled.section`
   font-size: ${rem(32)};
   text-align: center;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
-
-  &:first-child {
-    border-radius: ${rem(63)} ${rem(63)} 0 0;
-    padding-top: ${rem(106)};
-  }
-  &:last-child {
-    padding-bottom: ${rem(106)};
-  }
+`
+export const WrapperFirst = styled(WrapperBase)`
+  border-radius: ${rem(63)} ${rem(63)} 0 0;
+  padding-top: ${rem(106)};
+`
+export const WrapperLast = styled(WrapperBase)`
+  padding-bottom: ${rem(106)};
 `
 
 export const ImageStack = styled.div`

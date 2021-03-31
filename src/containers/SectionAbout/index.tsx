@@ -21,7 +21,7 @@ const SectionAbout: React.FC = () => {
 
   return (
     <>
-      <Section as={S.Wrapper}>
+      <Section as={S.WrapperFirst}>
         <Row center="xs">
           <Col xs={12} sm={8}>
             <S.Title>{title}</S.Title>
@@ -34,7 +34,7 @@ const SectionAbout: React.FC = () => {
         <Carousel />
       </S.ImageStack>
 
-      <Section as={S.Wrapper}>
+      <Section as={S.WrapperLast}>
         <Row center="xs">
           <Col xs={12} sm={8}>
             <S.HashtagStack>
