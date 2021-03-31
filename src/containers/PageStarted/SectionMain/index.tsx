@@ -3,10 +3,12 @@ import { Row, Col } from "react-styled-flexboxgrid"
 
 import { useFormatMessages } from "../../../utils/hooks"
 
+// import Decor from "../../../components/Decor"
+// import PathLine from "../../../assets/shapes/path-line"
 import Section from "../../../components/Section"
-import BlockStepLead from "../../../components/BlockStepLead"
 import CardBoxLink from "../../../components/CardBoxLink"
 import CardSocial from "../../../components/CardSocial/index"
+import BlockStepLead from "../../../components/BlockStepLead"
 import { stepOneButtons, stepTwoButtons, stepFourLinks } from "./data"
 import * as S from "./styled"
 
@@ -62,7 +64,13 @@ const SectionMain: React.FC = () => {
   ])
 
   return (
-    <>
+    <S.SectionWrapper>
+      {/* <>
+        <Decor style={{ top: "200px", left: "40vw", zIndex: 1 }} $width="700px">
+          <PathLine $type={4} $opacity={0.6} />
+        </Decor>
+      </> */}
+
       <Section as={S.RadiusWrapper}>
         <BlockStepLead step={1} title={titleOne} />
         <TabsGroup
@@ -125,15 +133,15 @@ const SectionMain: React.FC = () => {
           <S.CardsContainerCol md={12} lg={8}>
             <S.SocialCardsRow>
               {stepFourLinks.map((card, index) => (
-                <Col xs={12} md={4} key={index}>
-                  <CardSocial type={card.type} link={card.link} />
+                <Col xs={6} md={4} key={index}>
+                  <CardSocial type={card.type} link={card.link} icon={card.icon} />
                 </Col>
               ))}
             </S.SocialCardsRow>
           </S.CardsContainerCol>
         </Row>
       </Section>
-    </>
+    </S.SectionWrapper>
   )
 }
 

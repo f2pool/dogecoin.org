@@ -34,6 +34,10 @@ export const Main = styled.button<ButtonProps>`
   letter-spacing: -0.5px;
   color: ${(props) => props.theme.colors.primary};
 
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    font-size: ${(props) => (props.$icon && props.$fullWidth ? rem(20) : rem(18))};
+  }
+
   padding: var(--padding-horizontal) var(--padding-vertical);
   border-radius: ${rem(32)};
 
