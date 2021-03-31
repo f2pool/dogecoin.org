@@ -4,10 +4,6 @@ import { Row, Col } from "react-styled-flexboxgrid"
 import Section from "../../components/Section"
 import Button from "../../components/Button"
 import { useFormatMessages } from "../../utils/hooks"
-import OvalRoundOne from "../../assets/shapes/oval-round-1.svg"
-import OvalRoundTwo from "../../assets/shapes/oval-round-2.svg"
-import OvalSmooth from "../../assets/shapes/oval-smooth.svg"
-import OvalPointy from "../../assets/shapes/oval-pointy.svg"
 
 import Oval from "../../assets/shapes/oval"
 

@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect"
 import Rect from "../../assets/shapes/rect-text.svg"
 import * as S from "./styled"
 
-const wordsTop = ["Much", "Such", "Very", "So"]
+// TODO: const wordsTop = ["Much", "Such", "Very", "So"]
 const wordsBottom = ["Doge", "Crypto", "Coin", "Hodl"]
 
 const TypeWriter: React.FC = () => {
