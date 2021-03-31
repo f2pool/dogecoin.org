@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { rem } from "polished"
+import { rem, rgba } from "polished"
 
 /**
  * Types
@@ -15,6 +15,7 @@ interface ButtonProps {
   $icon: boolean
   $textFirst: boolean
   $fullWidth: boolean
+  $bordered: boolean
 }
 
 export const Icon = styled.img`
@@ -41,9 +42,14 @@ export const Main = styled.button<ButtonProps>`
 
   width: ${(props) => (props.$fullWidth ? "100%" : "auto")};
   outline: none !important;
+  transition: all 0.3s ease;
 
   &:is(button) {
     cursor: pointer;
+
+    &:hover {
+      transform: scale(1.01);
+    }
   }
 
   svg path {
@@ -56,6 +62,7 @@ export const Main = styled.button<ButtonProps>`
     css`
       background-color: ${props.theme.colors.white};
     `}
+
   ${(props) =>
     props.backgroundColor === "black" &&
     css`
@@ -89,6 +96,41 @@ export const Main = styled.button<ButtonProps>`
 
       svg path {
         fill: ${(props) => props.theme.colors.accent};
+      }
+    `}
+
+
+  ${(props) =>
+    props.$bordered &&
+    css`
+      color: ${props.theme.colors.white} !important;
+      box-shadow: inset 0 0 0 2px ${rgba("#979797", 0.2)};
+      border-radius: ${rem(32)};
+
+      &:hover {
+        background-color: ${rgba("#979797", 0.2)};
+      }
+
+      svg {
+        margin-right: 0;
+
+        path {
+          fill: ${(props) => props.theme.colors.white};
+        }
+      }
+    `}
+
+  ${(props) =>
+    props.$bordered &&
+    props.$icon &&
+    css`
+      padding: ${rem(16)};
+      font-size: 0;
+      width: ${rem(96)};
+      height: ${rem(96)};
+
+      svg {
+        width: ${rem(64)};
       }
     `}
 

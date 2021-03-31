@@ -9,17 +9,16 @@ export const Footer = styled.footer`
 
   h3 {
     color: ${(props) => props.theme.fontWeight.medium};
-    font-size: ${rem(70)};
-    color: ${(props) => props.theme.colors.background};
+    font-size: ${rem(40)};
+    color: ${(props) => props.theme.colors.odd};
     text-align: center;
     line-height: ${rem(64)};
-    max-width: ${rem(400)};
-    margin: 0 auto ${rem(44)};
+    margin: 0 auto ${rem(36)};
   }
 `
 
 export const Wrapper = styled.div`
-  padding: 15vh 0;
+  padding: 15vh 0 ${rem(70)};
   text-align: center;
   background-color: ${(props) => props.theme.colors.dark};
   color: ${(props) => props.theme.colors.white};
@@ -33,7 +32,6 @@ export const Banner = styled.div`
 `
 
 export const Copy = styled.div`
-  margin: ${rem(50)} 0;
   opacity: 0.4;
   font-size: ${rem(24)};
 `
@@ -72,15 +70,11 @@ export const ShapesWrapper = styled.div`
   justify-content: center;
   z-index: 10;
   position: relative;
-  margin: ${rem(60)} 0;
+  flex-wrap: wrap;
+  margin: 0 auto ${rem(50)};
+  max-width: ${rem(600)};
 
-  > div {
-    padding: ${rem(10)};
-    margin: 0 ${rem(20)};
-  }
-
-  svg {
-    width: ${rem(40)};
-    margin-right: 0;
+  > * {
+    margin: 0 ${rem(8)} ${rem(16)};
   }
 `
