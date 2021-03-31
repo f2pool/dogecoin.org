@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-styled-flexboxgrid"
 
 import Section from "../../components/Section"
@@ -31,6 +32,9 @@ const SectionAbout: React.FC = () => {
         <Row center="xs">
           <Col xs={12} sm={8} md={7}>
             <S.Title>{title}</S.Title>
+            <S.Media>
+              <StaticImage src={"../../assets/images/doge-main.jpg"} alt="Doge" width={683} height={396} />
+            </S.Media>
             <S.LeadText dangerouslySetInnerHTML={{ __html: lead }} />
             <S.Text dangerouslySetInnerHTML={{ __html: text }} />
           </Col>

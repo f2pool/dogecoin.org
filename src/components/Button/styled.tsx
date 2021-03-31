@@ -24,8 +24,8 @@ export const Icon = styled.img`
 `
 
 export const Main = styled.button<ButtonProps>`
-  --padding-horizontal: ${(props) => (props.$icon && props.$fullWidth ? rem(36) : rem(12))};
-  --padding-vertical: ${rem(30)};
+  --padding-horizontal: ${(props) => (props.$icon && props.$fullWidth ? rem(36) : rem(18))};
+  --padding-vertical: ${rem(40)};
 
   font-size: ${(props) => (props.$icon && props.$fullWidth ? rem(31) : rem(25))};
   font-weight: ${(props) => props.theme.fontWeight.bold};
@@ -40,6 +40,7 @@ export const Main = styled.button<ButtonProps>`
   align-items: center;
 
   width: ${(props) => (props.$fullWidth ? "100%" : "auto")};
+  outline: none !important;
 
   &:is(button) {
     cursor: pointer;
@@ -96,6 +97,7 @@ export const Main = styled.button<ButtonProps>`
     css`
       color: ${props.theme.colors.white};
       background-color: ${props.theme.colors.primary};
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
     `}
 
   // icons
