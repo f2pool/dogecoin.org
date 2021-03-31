@@ -2,7 +2,7 @@ import React from "react"
 import { Row, Col } from "react-styled-flexboxgrid"
 
 import Section from "../../components/Section"
-
+import Carousel from "../../components/Carousel"
 import { useFormatMessages } from "../../utils/hooks"
 
 import * as S from "./styled"
@@ -20,24 +20,34 @@ const SectionAbout: React.FC = () => {
   const [title, text] = useFormatMessages([{ id: "ABOUT_TITLE" }, { id: "ABOUT_TEXT" }])
 
   return (
-    <Section as={S.Wrapper}>
-      <Row center="xs">
-        <Col xs={12} sm={8}>
-          <S.Title>{title}</S.Title>
-          <S.Text dangerouslySetInnerHTML={{ __html: text }} />
+    <>
+      <Section as={S.WrapperFirst}>
+        <Row center="xs">
+          <Col xs={12} sm={8}>
+            <S.Title>{title}</S.Title>
+            <S.Text dangerouslySetInnerHTML={{ __html: text }} />
+          </Col>
+        </Row>
+      </Section>
 
-          <S.ImageStack></S.ImageStack>
+      <S.ImageStack>
+        <Carousel />
+      </S.ImageStack>
 
-          <S.HashtagStack>
-            {hashtags.map((item, i) => (
-              <S.Hashtag key={i} style={{ backgroundColor: item.bg, color: item.color }}>
-                #{item.text}
-              </S.Hashtag>
-            ))}
-          </S.HashtagStack>
-        </Col>
-      </Row>
-    </Section>
+      <Section as={S.WrapperLast}>
+        <Row center="xs">
+          <Col xs={12} sm={8}>
+            <S.HashtagStack>
+              {hashtags.map((item, i) => (
+                <S.Hashtag key={i} style={{ backgroundColor: item.bg, color: item.color }}>
+                  #{item.text}
+                </S.Hashtag>
+              ))}
+            </S.HashtagStack>
+          </Col>
+        </Row>
+      </Section>
+    </>
   )
 }
 
