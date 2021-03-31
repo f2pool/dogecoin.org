@@ -28,13 +28,19 @@ export const Wrapper = styled.div<TypeWriterProps>`
       ${(props) =>
         props.wordIndex === 1 &&
         css`
-          fill: ${(props) => props.theme.colors.primary};
+          fill: ${(props) => props.theme.colors.accent};
         `}
 
       ${(props) =>
         props.wordIndex === 2 &&
         css`
-          fill: ${(props) => props.theme.colors.accent};
+          fill: ${(props) => props.theme.colors.primary};
+        `}
+
+        ${(props) =>
+        props.wordIndex === 3 &&
+        css`
+          fill: ${(props) => props.theme.colors.dark};
         `}
     }
   }

@@ -4,7 +4,8 @@ import Typewriter from "typewriter-effect"
 import Rect from "../../assets/shapes/rect-text.svg"
 import * as S from "./styled"
 
-const words = ["Doge", "Simple", "Wow"]
+const wordsTop = ["Much", "Such", "Very", "So"]
+const wordsBottom = ["Doge", "Crypto", "Coin", "Hodl"]
 
 const TypeWriter: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -17,15 +18,19 @@ const TypeWriter: React.FC = () => {
           onInit={(typewriter) => {
             typewriter // TODO: simplify & refactor
               .callFunction(() => setCurrentIndex(0))
-              .typeString(words[0])
+              .typeString(wordsBottom[0])
               .pauseFor(500)
               .deleteAll()
               .callFunction(() => setCurrentIndex(1))
-              .typeString(words[1])
+              .typeString(wordsBottom[1])
               .pauseFor(500)
               .deleteAll()
               .callFunction(() => setCurrentIndex(2))
-              .typeString(words[2])
+              .typeString(wordsBottom[2])
+              .pauseFor(500)
+              .deleteAll()
+              .callFunction(() => setCurrentIndex(3))
+              .typeString(wordsBottom[3])
               .pauseFor(500)
               .start()
           }}

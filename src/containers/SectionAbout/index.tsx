@@ -3,6 +3,8 @@ import { Row, Col } from "react-styled-flexboxgrid"
 
 import Section from "../../components/Section"
 import Carousel from "../../components/Carousel"
+import Banner from "../../components/Banner"
+
 import { useFormatMessages } from "../../utils/hooks"
 
 import * as S from "./styled"
@@ -17,22 +19,27 @@ const hashtags = [
 ]
 
 const SectionAbout: React.FC = () => {
-  const [title, text] = useFormatMessages([{ id: "ABOUT_TITLE" }, { id: "ABOUT_TEXT" }])
+  const [title, lead, text] = useFormatMessages([
+    { id: "ABOUT_TITLE" },
+    { id: "ABOUT_TEXT_LEAD" },
+    { id: "ABOUT_TEXT" },
+  ])
 
   return (
     <>
       <Section as={S.WrapperFirst}>
         <Row center="xs">
-          <Col xs={12} sm={8}>
+          <Col xs={12} sm={8} md={7}>
             <S.Title>{title}</S.Title>
+            <S.LeadText dangerouslySetInnerHTML={{ __html: lead }} />
             <S.Text dangerouslySetInnerHTML={{ __html: text }} />
           </Col>
         </Row>
       </Section>
 
-      <S.ImageStack>
-        <Carousel />
-      </S.ImageStack>
+      <S.BannerContainer>
+        <Banner text="Much Wow" />
+      </S.BannerContainer>
 
       <Section as={S.WrapperLast}>
         <Row center="xs">
@@ -47,6 +54,10 @@ const SectionAbout: React.FC = () => {
           </Col>
         </Row>
       </Section>
+
+      <S.ImageStack>
+        <Carousel />
+      </S.ImageStack>
     </>
   )
 }

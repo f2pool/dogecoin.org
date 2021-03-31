@@ -6,7 +6,7 @@ import * as S from "./styled"
  * Types
  */
 interface ButtonProps {
-  text: string
+  text: React.ReactNode | string
   textColor?: S.Color
   icon?: React.ReactNode | string | null
   textFirst?: boolean

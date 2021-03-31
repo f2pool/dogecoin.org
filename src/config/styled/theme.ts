@@ -7,13 +7,13 @@ const theme = {
     container: {
       sm: 0, // rem
       md: 64, // rem
-      lg: 110, // rem
+      lg: 111, // rem
     },
     breakpoints: {
       xs: 0, // em
       sm: 48, // em
       md: 64, // em
-      lg: 110.3, // em
+      lg: 111.3, // em
     },
   },
   font: {
