@@ -36,7 +36,9 @@ export default {
   WALLET_OFFICIAL_SUBTITLE: "from the Dogecoin project",
   WALLET_ALT_TITLE: "Alternative",
   WALLET_ALT_SUBTITLE: "popular wallets",
-  FOOTER_TEXT_US: "Learn More",
-  FOOTER_FOLLOW_US: "Community & Support",
+  GET_STARTED_TITLE: "Getting Started",
+  GET_STARTED_SUBTITLE: "It is very easy to start using Dogecoin",
+  FOOTER_TEXT_US: "Have questions? Text us.",
+  FOOTER_FOLLOW_US: "Follow us",
   FOOTER_OR: "or",
 }

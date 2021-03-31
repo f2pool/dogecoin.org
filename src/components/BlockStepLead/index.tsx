@@ -18,6 +18,12 @@ export const Title = styled.h2`
   text-align: center;
   padding-top: ${rem(40)};
   margin-bottom: 0;
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    font-size: ${rem(30)};
+    line-height: ${rem(36)};
+    letter-spacing: -1.5px;
+  }
 `
 export const RowWrapper = styled(Row)`
   padding-bottom: ${rem(64)};

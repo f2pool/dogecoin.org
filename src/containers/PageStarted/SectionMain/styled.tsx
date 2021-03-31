@@ -2,11 +2,27 @@ import styled from "styled-components"
 import { rem } from "polished"
 import { Row, Col } from "react-styled-flexboxgrid"
 
+export const SectionWrapper = styled.div`
+  position: relative;
+`
+
 export const Wrapper = styled.div`
+  position: relative;
   background-color: ${(props) => props.theme.colors.background};
+
+  & > * {
+    z-index: 2;
+    position: relative;
+  }
 
   &:not(:last-child) {
     padding-bottom: ${rem(160)};
+  }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    &:not(:last-child) {
+      padding-bottom: ${rem(96)};
+    }
   }
 `
 export const RadiusWrapper = styled(Wrapper)`
@@ -29,7 +45,7 @@ export const TabsButtons = styled.div`
     margin-bottom: ${rem(24)};
   }
   svg path {
-    fill: ${(props) => props.theme.colors.white};
+    fill: ${(props) => props.theme.colors.white} !important;
   }
 `
 export const TabsCol = styled(Col)`
@@ -42,6 +58,7 @@ export const TabsCol = styled(Col)`
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
     &:first-child {
       padding: 0;
+      margin-bottom: ${rem(72)};
     }
     &:last-child {
       padding: 0;
@@ -85,5 +102,11 @@ export const SocialCardsRow = styled(Row)`
     max-width: calc(100% / 3 - ${rem(24)});
     padding: 0;
     margin-bottom: ${rem(40)};
+
+    @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+      max-width: initial;
+      padding: ${rem(8)};
+      margin-bottom: ${rem(24)};
+    }
   }
 `
