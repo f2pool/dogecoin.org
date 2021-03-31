@@ -22,4 +22,7 @@ export default {
   MEME_FINISH_ALT: "Shiba inus at olympics",
   MEME_RACECAR_ALT: "A Ford race car painted with Doge coin memes",
   MEME_MOON_ALT: "Shiba inu landing on the moon as an astronaut",
+  FOOTER_TEXT_US: "Have questions? Text us.",
+  FOOTER_FOLLOW_US: "Follow us",
+  FOOTER_OR: "or",
 }
