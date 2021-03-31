@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
     <S.Footer>
       <S.Wrapper>
         <S.Banner>
-          <Banner type="bold" text="much wow. such random." />
+          <Banner type="bold" texts={["much wow", "such random"]} />
         </S.Banner>
         <Grid>
           <Row center="xs">

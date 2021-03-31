@@ -42,7 +42,7 @@ const SectionAbout: React.FC = () => {
       </Section>
 
       <S.BannerContainer>
-        <Banner text="much wow.  such random. " />
+        <Banner texts={["much wow", "such random"]} />
       </S.BannerContainer>
 
       <Section as={S.WrapperLast}>
