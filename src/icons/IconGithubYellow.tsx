@@ -4,7 +4,7 @@ import SvgIcon from "../components/SvgIcon"
 
 const IconSave = () => {
   return (
-    <SvgIcon width="64" height="64" viewBox="0 0 64 64">
+    <SvgIcon viewBox="0 0 64 64">
       <g fill="none" fill-rule="evenodd">
         <g>
           <g>

@@ -23,6 +23,7 @@ export default {
   GUIDE_STEP_4_SECTION_TITLE:
     "There are many communities you can join to meet other Dogecoin enthusiasts and get the latest info",
   GUIDE_CTA_TEXT: "Getting Started Guide",
+  GETTING_STARTED_TITLE: "Getting Started",
   MEME_DIP_ALT: "DIP-1337",
   MEME_LIONKING_ALT: "Elon Musk holding a shiba inu dog in the Lion King cliff scene",
   MEME_SOON_ALT: "Shiba inu dog driving Tesla",
@@ -35,7 +36,7 @@ export default {
   WALLET_OFFICIAL_SUBTITLE: "from the Dogecoin project",
   WALLET_ALT_TITLE: "Alternative",
   WALLET_ALT_SUBTITLE: "popular wallets",
-  FOOTER_TEXT_US: "Have questions? Text us.",
-  FOOTER_FOLLOW_US: "Follow us",
+  FOOTER_TEXT_US: "Learn More",
+  FOOTER_FOLLOW_US: "Community & Support",
   FOOTER_OR: "or",
 }

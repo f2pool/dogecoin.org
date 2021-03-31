@@ -17,6 +17,7 @@ interface ButtonProps {
   gatsbyLink?: boolean
   fullWidth?: boolean
   onClick?: Function | null
+  anchor?: boolean
   as?: any // TODO
 }
 
@@ -31,6 +32,7 @@ const Button: React.FC<ButtonProps> = ({
   gatsbyLink = false,
   fullWidth = false,
   onClick = null,
+  anchor = false,
   as = "button",
 }: ButtonProps) => {
   const handleOnClick = (): void => {
@@ -68,9 +70,12 @@ const Button: React.FC<ButtonProps> = ({
       {...(href && {
         as: "a",
         href: href,
-        target: "_blank",
-        rel: "noopener noreferrer",
       })}
+      {...(href &&
+        !anchor && {
+          target: "_blank",
+          rel: "noopener noreferrer",
+        })}
       onClick={handleOnClick}
       as={!href ? as : "a"}
     >

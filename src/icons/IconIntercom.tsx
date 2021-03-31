@@ -4,7 +4,7 @@ import SvgIcon from "../components/SvgIcon"
 
 const IconIntercom = () => {
   return (
-    <SvgIcon width="40" height="40" viewBox="0 0 40 40">
+    <SvgIcon viewBox="0 0 40 40">
       <path
         fillRule="evenodd"
         clipRule="evenodd"

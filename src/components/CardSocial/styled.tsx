@@ -16,6 +16,10 @@ export const Card = styled.a`
   p {
     margin-bottom: 0;
   }
+
+  svg {
+    width: ${rem(40)};
+  }
 `
 
 export const IconWrapper = styled.div`
@@ -31,9 +35,10 @@ export const IconWrapper = styled.div`
   margin-bottom: ${rem(24)};
 
   svg {
-    max-width: ${rem(56)};
+    width: ${rem(64)};
     margin-right: 0;
   }
+
   svg path {
     fill: ${(props) => props.theme.colors.secondary};
   }

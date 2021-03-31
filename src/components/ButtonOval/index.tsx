@@ -16,6 +16,7 @@ interface OvalProps {
   shapeColor?: string
   shapeType?: S.ShapeType
   shapeRotate?: number | string
+  anchor?: boolean
   href?: string | null
   onClick?: Function | null
 }
@@ -28,6 +29,7 @@ const ButtonOval: React.FC<OvalProps> = ({
   href = null,
   onClick = null,
   shapeColor,
+  anchor = false,
   shapeRotate = 0,
 }: OvalProps) => {
   const shape = shapeType === "video-play" || shapeType === "telegram" ? 1 : 3
@@ -40,6 +42,7 @@ const ButtonOval: React.FC<OvalProps> = ({
         icon={icon}
         href={href}
         onClick={onClick}
+        anchor={anchor}
         as={shapeType === "landing-copy" ? "a" : "button"}
       />
       <S.Shape>

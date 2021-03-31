@@ -131,6 +131,10 @@ export const Main = styled.button<ButtonProps>`
       padding-left: ${rem(100)};
       padding-right: ${rem(100)};
 
+      svg {
+        width: ${rem(40)};
+      }
+
       @media all and (min-width: 321px) {
         svg,
         img {

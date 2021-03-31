@@ -20,15 +20,17 @@ export const Shape = styled.div`
 
   svg {
     min-width: 100%;
-  }
-
-  svg path {
-    width: 100%;
+    transform: scale(1) rotate(0deg);
+    transition: transform 1s ease;
   }
 `
 export const Wrapper = styled.div<ShapeProps>`
   display: inline-block;
   position: relative;
+
+  &:hover ${Shape} svg {
+    transform: scale(1.01) rotate(160deg) !important;
+  }
 
   ${(props) =>
     props.shapeType === "video-play" &&
@@ -44,34 +46,17 @@ export const Wrapper = styled.div<ShapeProps>`
     props.shapeType === "landing-copy" &&
     css`
       padding: 0 ${rem(2)};
+
+      &:hover ${Shape} svg {
+        transform: scale(1.01) rotate(-10deg) !important;
+      }
     `}
 
   ${(props) =>
     props.shapeType === "twitter" &&
     css`
-      padding: 0 ${rem(12)};
-
-      img {
-        max-width: 36px;
-      }
-
-      ${Shape} {
-        top: calc(50% + 4px);
-      }
-    `}
-
-  ${(props) =>
-    props.shapeType === "telegram" &&
-    css`
-      padding: 0 ${rem(18)};
-
-      img {
-        max-width: 36px;
-      }
-
-      ${Shape} {
-        top: calc(50% + 4px);
-        left: 5px;
+      &:hover ${Shape} svg {
+        transform: scale(1.01) rotate(-10deg) !important;
       }
     `}
 `
