@@ -1,5 +1,11 @@
+// TODO: change siteMetadata
 module.exports = {
   pathPrefix: "/dogecoin.org",
+  siteMetadata: {
+    name: "dogecoin.org",
+    title: "dogecoin.org",
+    description: `dogecoin.org`,
+  },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
