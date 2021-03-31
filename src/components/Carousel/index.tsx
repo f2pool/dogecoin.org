@@ -41,6 +41,10 @@ const slides = [
     link: "https://www.digitaltrends.com/social-media/dogecoin-jamaican-bobsled-team-olympics/",
   },
   {
+      staticImg: (alt: string) => <StaticImage src={"../../assets/images/memes/ethpeople.png"} alt={alt} />,
+      link: "#",
+  },
+  {
     staticImg: (alt: string) => <StaticImage src={"../../assets/images/memes/racecar.png"} alt={alt} />,
     link: "https://ftw.usatoday.com/2014/04/nascar-doge-dogecoin-dogecar-josh-wise",
   },
