@@ -24,7 +24,7 @@ export const Icon = styled.img`
 `
 
 export const Main = styled.button<ButtonProps>`
-  --padding-horizontal: ${(props) => (props.$icon && props.$fullWidth ? rem(36) : rem(18))};
+  --padding-horizontal: ${(props) => (props.$icon && props.$fullWidth ? rem(30) : rem(18))};
   --padding-vertical: ${rem(40)};
 
   font-size: ${(props) => (props.$icon && props.$fullWidth ? rem(31) : rem(25))};
@@ -72,10 +72,14 @@ export const Main = styled.button<ButtonProps>`
 
   ${(props) =>
     props.backgroundColor === "background" &&
+    css`
+      background-color: ${props.theme.colors.background};
+    `}
+
+  ${(props) =>
     props.textColor === "accent" &&
     css`
       color: ${props.theme.colors.accent};
-      background-color: ${props.theme.colors.background};
 
       svg path {
         fill: ${(props) => props.theme.colors.accent};
@@ -118,6 +122,8 @@ export const Main = styled.button<ButtonProps>`
     css`
       justify-content: center;
       position: relative;
+      padding-left: ${rem(100)};
+      padding-right: ${rem(100)};
 
       @media all and (min-width: 321px) {
         svg,

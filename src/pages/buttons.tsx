@@ -27,7 +27,7 @@ const Buttons: React.FC = () => {
             fullWidth
             href="#"
           />
-          <ButtonOval text="Let's Wow" shapeType="landing-copy" />
+          <ButtonOval text="Let’s Wow" shapeType="landing-copy" />
           <ButtonOval text="Video" icon="play" shapeType="video-play" />
           <ButtonOval icon="twitter" shapeType="twitter" href="#" />
           <ButtonOval icon="telegram" shapeType="telegram" href="#" />
