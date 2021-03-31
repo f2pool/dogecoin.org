@@ -26,7 +26,7 @@ export const Text = styled.div`
     height: ${rem(24)};
     position: absolute;
     left: ${rem(40)};
-    top: 50%;
+    top: 55%;
     border-radius: 100px;
     transform: translate(-50%, -50%);
     background-color: ${(props) => props.theme.colors.white};
