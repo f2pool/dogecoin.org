@@ -36,7 +36,7 @@ const SectionGuide: React.FC = () => {
       </S.ShapesRow>
 
       <Row center="xs">
-        <Button text={ctaText} backgroundColor="primary" href="#" />
+        <Button text={ctaText} backgroundColor="primary" href="/getting-started" gatsbyLink />
       </Row>
     </Section>
   )
