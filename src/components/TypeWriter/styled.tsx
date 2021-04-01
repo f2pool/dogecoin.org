@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components"
 import { rem } from "polished"
 
+import { fadeIn } from "../../config/styled/keyframes"
+
 interface TypeWriterProps {
   wordIndex: number
 }
@@ -8,6 +10,8 @@ export const Wrapper = styled.div<TypeWriterProps>`
   position: relative;
   display: inline-block;
   padding: ${rem(10)} ${rem(40)} ${rem(20)} ${rem(30)};
+  opacity: 0;
+  animation: 0.8s ${fadeIn} ease forwards 0.1s;
 
   svg {
     position: absolute;
