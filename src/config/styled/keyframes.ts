@@ -20,3 +20,18 @@ export const float = keyframes`
   50% { transform: translatey(-10px); }
   100% { transform: translatey(0px); }
 `
+
+export const fadeIn = keyframes`
+  0% { opacity: 0;}
+  100% { opacity: 1 }
+`
+
+export const rotateIn = keyframes`
+  0% { transform: scale(3) translate(-100%, 100%) rotate(20deg); opacity: 0 }
+  100% {  transform: scale(1) translate(0, 0) rotate(0);  opacity: 1 }
+`
+
+export const popUp = keyframes`
+  0% { transform: scale(0.9); opacity: 0 }
+  100% {  transform: scale(1); opacity: 1 }
+`
