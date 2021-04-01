@@ -93,7 +93,7 @@ const Carousel: React.FC = () => {
   return (
     <PageVisibility onChange={handleVisibilityChange}>
       {pageIsVisible && (
-        <Ticker speed={10}>
+        <Ticker speed={2}>
           {({ index }) => {
             const currentIndex = index % slides.length
             const currentSlide = slides[currentIndex]
