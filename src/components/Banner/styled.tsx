@@ -51,6 +51,7 @@ export const Wrapper = styled.div<WrapperProps>`
   font-size: ${rem(48)};
   color: ${(props) => props.theme.colors.secondary};
   letter-spacing: ${rem(-1.09)};
+  text-align: right;
 
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     font-size: 20px;
