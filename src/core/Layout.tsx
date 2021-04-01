@@ -40,13 +40,12 @@ const Layout: React.FC<Props> = ({ title, description, isSimpleHeader = false, c
   return (
     <IntlProvider locale={DEFAULT_LANG} messages={locale[DEFAULT_LANG]}>
       <Helmet>
-        <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <title>{title ?? defaultTitle}</title>
+
         <meta name="theme-color" content="#00665e" />
         <meta name="description" content={description ?? defaultDescription} />
-
         <meta property="og:image" content={withPrefix("/images/website-preview.png")} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -60,6 +59,7 @@ const Layout: React.FC<Props> = ({ title, description, isSimpleHeader = false, c
         <meta name="twitter:url" content="" /> */}
 
         <link rel="apple-touch-icon" href={withPrefix("/favicon/apple-touch-icon.png")} />
+        <link rel="icon" href={withPrefix("/favicon/favicon.ico")} />
         <link rel="icon" type="image/png" sizes="16x16" href={withPrefix("/favicon/favicon-16x16.png")} />
         <link rel="icon" type="image/png" sizes="32x32" href={withPrefix("/favicon/favicon-32x32.png")} />
         <link rel="icon" type="image/png" sizes="192x192" href={withPrefix("/favicon/android-chrome-192x192.png")} />
