@@ -1,5 +1,6 @@
 module.exports = {
-  pathPrefix: "/dogecoin.org",
+  // pathPrefix: "/dogecoin.org",
+  assetPrefix: "https://dogecoinorg.github.io/dogecoin.org/",
   siteMetadata: {
     name: "dogecoin.org",
     title: "dogecoin.org",
