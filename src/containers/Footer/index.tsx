@@ -29,8 +29,6 @@ const Footer: React.FC = () => {
                 <Button bordered icon={<IconReddit />} href={LINKS.reddit} />
                 <Button bordered icon={<IconTwitter />} href={LINKS.twitter} />
                 <Button bordered icon={<IconDiscord />} href={LINKS.discord} />
-                <Button bordered icon={<IconFacebook />} href={LINKS.facebook} />
-                <Button bordered icon={<IconSubReddit />} href={LINKS.subreddit} />
                 <Button bordered icon={<IconGithub />} href={LINKS.github} />
               </S.ShapesWrapper>
               <S.Copy>

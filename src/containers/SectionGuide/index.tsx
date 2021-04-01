@@ -13,7 +13,7 @@ const Shapes: React.FC = () => {
   return (
     <>
       {[1, 2, 3, 4].map((step) => (
-        <S.StepCol xs={12} sm={6} md={3} key={step}>
+        <S.StepCol xs={6} md={3} key={step}>
           <CardStep step={step} />
         </S.StepCol>
       ))}
