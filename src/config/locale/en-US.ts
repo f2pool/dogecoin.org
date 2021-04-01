@@ -1,5 +1,5 @@
 export default {
-  ABOUT_TITLE: "What is <span>DIP-1337</span>?",
+  ABOUT_TITLE: 'Introducing <span><a href="https://github.com/dogeletariatdan/dips/blob/master/dip-1337.mediawiki">DIP-1337</a></span>',
   LEAD_BUTTON_TEXT_1: "Let’s Wow",
   LEAD_BUTTON_TEXT_2: "Video",
   ABOUT_TEXT_LEAD: "102 whales such hodl, shibe need loot.",

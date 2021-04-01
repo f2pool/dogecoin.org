@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                 <Button bordered icon={<IconSubReddit />} href={LINKS.subreddit} />
                 <Button bordered icon={<IconGithub />} href={LINKS.github} />
               </S.ShapesWrapper>
-              <S.Copy>&copy; 2021</S.Copy>
+              <S.Copy>Released under <a href="http://www.wtfpl.net/">WTFPL</a></S.Copy>
             </Col>
           </Row>
         </Grid>
