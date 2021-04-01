@@ -1,5 +1,5 @@
 import React from "react"
-import { Grid } from "react-styled-flexboxgrid"
+import { CustomGrid } from "../../core/GlobalStyles"
 
 import * as S from "./styled"
 
@@ -11,7 +11,7 @@ interface SectionProps {
 const Section: React.FC<SectionProps> = ({ children, as, ...rest }: SectionProps) => {
   return (
     <S.Section as={as} {...rest}>
-      <Grid>{children}</Grid>
+      <CustomGrid>{children}</CustomGrid>
     </S.Section>
   )
 }
