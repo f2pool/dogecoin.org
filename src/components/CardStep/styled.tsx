@@ -21,6 +21,7 @@ export const ShapeWrapper = styled.div`
     flex-direction: column;
   }
 `
+
 export const TextWrapper = styled.div`
   text-align: center;
 
@@ -44,10 +45,20 @@ export const TextWrapper = styled.div`
 
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
     p {
-      margin-bottom: ${rem(0)};
+      font-size: 12px;
+      letter-spacing: 0.6px;
+      line-height: normal;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 20px;
+      letter-spacing: -0.3px;
+      max-width: none;
     }
   }
 `
+
 export const Icon = styled.div`
   position: absolute;
   left: 50%;
@@ -59,6 +70,7 @@ export const Icon = styled.div`
     margin-right: 0;
   }
 `
+
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
@@ -67,5 +79,11 @@ export const Card = styled.div`
 
   ${ShapeWrapper} {
     margin-bottom: ${rem(24)};
+  }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    ${ShapeWrapper} {
+      margin-bottom: 16px;
+    }
   }
 `

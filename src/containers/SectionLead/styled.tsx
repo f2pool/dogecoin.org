@@ -11,10 +11,10 @@ export const Title = styled.h1`
     display: block;
   }
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     font-size: 64px;
     letter-spacing: -2.72px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 `
 
@@ -28,8 +28,9 @@ export const Wrapper = styled.section`
     height: 100%;
   }
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     height: auto;
+    padding: 35px 0;
   }
 `
 
@@ -45,6 +46,10 @@ export const ShapesWrapper = styled.div`
   svg {
     width: ${rem(32)};
   }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    padding: 40px 0;
+  }
 `
 
 export const Doge = styled.div`
@@ -53,17 +58,17 @@ export const Doge = styled.div`
   margin-left: auto;
   position: relative;
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     width: 180px;
     height: 180px;
     margin-right: auto;
+    margin-bottom: 10px;
   }
 `
 
 export const Circle = styled.div`
   position: relative;
   pointer-events: none;
-
   font-size: 0;
   border-radius: 1000px;
   background-color: #e4d6ae;
@@ -91,7 +96,7 @@ export const Glasses = styled.div`
 
   img {
     max-width: 100%;
-    transform: rotate(11deg);
+    transform: rotate(13deg);
     position: relative;
     cursor: grab;
 

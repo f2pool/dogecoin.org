@@ -19,8 +19,8 @@ export const LeadText = styled.div`
   font-size: ${rem(40)};
   margin-bottom: ${rem(48)};
 
-  @media all and (max-width: 767px) {
-    font-size: 18px;
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    font-size: 26px;
     line-height: 26px;
     margin-bottom: 19px;
   }
@@ -36,6 +36,11 @@ const WrapperBase = styled.section`
 export const WrapperFirst = styled(WrapperBase)`
   border-radius: ${rem(63)} ${rem(63)} 0 0;
   padding-top: ${rem(106)};
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    border-radius: 24px 24px 0 0;
+    padding-top: 55px;
+  }
 `
 
 export const WrapperLast = styled(WrapperBase)``
@@ -44,7 +49,7 @@ export const BannerContainer = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   padding: ${rem(80)} 0;
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     padding: 20px 0;
   }
 `
@@ -60,7 +65,7 @@ export const ImageStack = styled.div`
     }
   }
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     .ticker__element {
       padding: 8px 0;
 
@@ -80,6 +85,11 @@ export const HashtagStack = styled.div`
   margin-right: auto;
   margin-bottom: 4vh;
   flex-wrap: wrap;
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    padding: 5px 0;
+    margin-bottom: 16px;
+  }
 `
 
 export const Hashtag = styled.div`
@@ -88,6 +98,13 @@ export const Hashtag = styled.div`
   border-radius: 100px;
   font-size: ${rem(25)};
   font-weight: bold;
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    font-size: 16px;
+    letter-spacing: -0.3px;
+    padding: 9px 15px;
+    margin: 0 4px 8px;
+  }
 `
 
 export const Media = styled.div`
@@ -103,7 +120,7 @@ export const Media = styled.div`
     max-width: 100%;
   }
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     margin-bottom: 45px;
     border-radius: 12px;
 

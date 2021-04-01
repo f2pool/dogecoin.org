@@ -28,8 +28,8 @@ export const Wrapper = styled.div<ShapeProps>`
   display: inline-block;
   position: relative;
 
-  a,
-  button {
+  > a,
+  > button {
     transform: scale(1) !important;
   }
 
@@ -64,4 +64,11 @@ export const Wrapper = styled.div<ShapeProps>`
         transform: scale(1.01) rotate(-10deg) !important;
       }
     `}
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    > a,
+    > button {
+      padding: 9px 20px;
+    }
+  }
 `

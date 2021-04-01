@@ -11,12 +11,12 @@ import { useFormatMessages } from "../../utils/hooks"
 import * as S from "./styled"
 
 const hashtags = [
+  { text: "doge", color: "#232D91", bg: "#FFF" },
   { text: "muchfunny", color: "#00665E", bg: "#FFD203" },
   { text: "dogecoinarmy", color: "#FFF", bg: "#00BEB5" },
   { text: "cryptocurrency", color: "#232D91", bg: "#C3F1FF" },
-  { text: "suchmemes", color: "#FFF", bg: "#00BEB5" },
-  { text: "doge", color: "#232D91", bg: "#FFF" },
   { text: "shiba", color: "#00665E", bg: "#FFD203" },
+  { text: "suchmemes", color: "#00665E", bg: "#FFF" },
 ]
 
 const SectionAbout: React.FC = () => {

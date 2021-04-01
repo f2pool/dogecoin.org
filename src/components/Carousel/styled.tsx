@@ -14,7 +14,9 @@ export const SlideWrapper = styled.div`
     transform: translate(0, -5px);
   }
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     margin-right: 8px;
+    width: 180px;
+    height: 180px;
   }
 `
