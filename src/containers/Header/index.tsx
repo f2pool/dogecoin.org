@@ -1,6 +1,7 @@
 import React from "react"
 import { withPrefix, Link } from "gatsby"
-import { Row, Col, Grid } from "react-styled-flexboxgrid"
+import { Row, Col } from "react-styled-flexboxgrid"
+import { CustomGrid } from "../../core/GlobalStyles"
 
 import IconArrowBack from "../../icons/IconArrowBack"
 
@@ -13,7 +14,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ isSimple = false }) => {
   return (
     <S.Header>
-      <Grid>
+      <CustomGrid>
         {!isSimple && (
           <Row>
             <Col xs={4}>
@@ -34,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ isSimple = false }) => {
             </Col>
           </S.SimpleHeaderRow>
         )}
-      </Grid>
+      </CustomGrid>
     </S.Header>
   )
 }

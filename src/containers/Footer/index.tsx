@@ -1,5 +1,6 @@
 import React from "react"
-import { Grid, Row, Col } from "react-styled-flexboxgrid"
+import { Row, Col } from "react-styled-flexboxgrid"
+import { CustomGrid } from "../../core/GlobalStyles"
 
 import { useFormatMessages } from "../../utils/hooks"
 import { IconGithub, IconReddit, IconDiscord, IconFacebook, IconTwitter, IconSubReddit } from "../../icons"
@@ -19,7 +20,7 @@ const Footer: React.FC = () => {
         <S.Banner>
           <Banner type="bold" texts={["much wow", "such random"]} />
         </S.Banner>
-        <Grid>
+        <CustomGrid>
           <Row center="xs">
             <Col xs={12} sm={8} md={5} lg={4}>
               <h3>{followUs}</h3>
@@ -32,10 +33,12 @@ const Footer: React.FC = () => {
                 <Button bordered icon={<IconSubReddit />} href={LINKS.subreddit} />
                 <Button bordered icon={<IconGithub />} href={LINKS.github} />
               </S.ShapesWrapper>
-              <S.Copy>Released under <a href="http://www.wtfpl.net/">WTFPL</a></S.Copy>
+              <S.Copy>
+                Released under <a href="http://www.wtfpl.net/">WTFPL</a>
+              </S.Copy>
             </Col>
           </Row>
-        </Grid>
+        </CustomGrid>
       </S.Wrapper>
     </S.Footer>
   )

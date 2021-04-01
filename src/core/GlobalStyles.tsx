@@ -1,5 +1,6 @@
-import { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
 import { normalize, rem } from "polished"
+import { Grid } from "react-styled-flexboxgrid"
 
 export const GlobalStyles = createGlobalStyle`
   ${normalize()};
@@ -79,5 +80,12 @@ export const GlobalStyles = createGlobalStyle`
   * {
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
+  }
+`
+
+export const CustomGrid = styled(Grid)`
+  @media all and (max-width: 767px) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 `

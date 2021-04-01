@@ -34,8 +34,8 @@ const OvalStroke: React.FC<Props> = ({ $color = "#FFD203", $strokeColor = "none"
   if ($type === 4) {
     return (
       <svg width="90" height="100" viewBox="0 0 90 100" version="1.1" style={{ transform: `rotate(${$rotate}deg)` }}>
-        <g fill="none" fill-rule="evenodd" opacity=".08">
-          <g stroke={$strokeColor} stroke-width="3">
+        <g fill="none" fillRule="evenodd" opacity=".08">
+          <g stroke={$strokeColor} strokeWidth="3">
             <g>
               <g>
                 <path
