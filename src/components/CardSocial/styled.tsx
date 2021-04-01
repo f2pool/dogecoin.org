@@ -23,7 +23,12 @@ export const IconWrapper = styled.div`
   svg path {
     fill: ${(props) => props.theme.colors.secondary} !important;
   }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    margin-bottom: 8px;
+  }
 `
+
 export const Card = styled.a`
   display: flex;
   flex-direction: column;
@@ -44,5 +49,10 @@ export const Card = styled.a`
     ${IconWrapper} {
       background-color: rgba(255, 210, 3, 0.2);
     }
+  }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    border-radius: 20px;
+    padding: 25px;
   }
 `

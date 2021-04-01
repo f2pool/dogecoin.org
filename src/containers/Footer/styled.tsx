@@ -16,7 +16,7 @@ export const Footer = styled.footer`
     margin: 0 auto ${rem(36)};
   }
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     padding-top: 50px;
   }
 `
@@ -82,7 +82,7 @@ export const ShapesWrapper = styled.div`
     margin: 0 ${rem(8)} ${rem(16)};
   }
 
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     max-width: 280px;
   }
 `

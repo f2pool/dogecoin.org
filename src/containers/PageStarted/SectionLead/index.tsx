@@ -14,13 +14,13 @@ const SectionLead: React.FC = () => {
 
   return (
     <Section as={S.Wrapper}>
-      <>
+      <S.Decors>
         {decorationsConfig.map((item, i) => (
           <Decor key={i} style={item.style} $width={item.width} $delay={item.delay} $speed={item.speed} $animate>
             {item.element}
           </Decor>
         ))}
-      </>
+      </S.Decors>
 
       <Row center="xs">
         <S.ColWrapper xs={12} md={7}>
@@ -81,20 +81,6 @@ const decorationsConfig = [
     element: <OvalStroke $color="#FFD203" $type={2} />,
     delay: 0.2,
     speed: 13,
-  },
-  {
-    style: { right: "-80px", top: "36px", zIndex: 1 },
-    width: "133px",
-    element: <Oval $color="#232D91" $rotate={30} />,
-    delay: 2.2,
-    speed: 10.5,
-  },
-  {
-    style: { left: "-80px", bottom: "120px", zIndex: 1 },
-    width: "133px",
-    element: <Oval $color="#232D91" $rotate={45} />,
-    delay: 0,
-    speed: 6.9,
   },
   {
     style: { top: "35%", right: "12%", zIndex: 1 },

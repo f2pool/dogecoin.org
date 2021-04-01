@@ -3,8 +3,24 @@ import { rem } from "polished"
 
 export type CardColor = "accent" | "black" | "secondary"
 
-export const ArrowWrapper = styled.div``
-export const OvalWrapper = styled.div``
+export const ArrowWrapper = styled.div`
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    svg {
+      width: 22px;
+      height: auto;
+      margin-right: 10px;
+    }
+  }
+`
+
+export const OvalWrapper = styled.div`
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    svg {
+      width: 60px;
+      height: auto;
+    }
+  }
+`
 
 export const IconGroup = styled.div`
   position: relative;
@@ -16,6 +32,10 @@ export const IconGroup = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    margin-top: 0;
   }
 `
 
@@ -35,6 +55,15 @@ export const Card = styled.a`
 
   ${OvalWrapper} {
     transition: transform 0.3s ease;
+  }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    padding: 46px 30px 30px;
+    border-radius: 20px;
+
+    p {
+      margin-bottom: 20px;
+    }
   }
 
   ${(props) =>

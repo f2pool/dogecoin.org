@@ -13,6 +13,10 @@ export const GlobalStyles = createGlobalStyle`
     @media all and (max-width: 767px) {
       font-size: 9px
     }
+
+    @media all and (min-width: 2000px) {
+      font-size: 18px;
+    }
   }
 
   body {
@@ -55,7 +59,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: ${(props) => rem(props.theme.fontSize.h1)};
     line-height: 1;
 
-    @media all and (max-width: 767px) {
+    @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
       font-size: 40px;
       margin-bottom: 42px;
     }
@@ -66,7 +70,7 @@ export const GlobalStyles = createGlobalStyle`
     letter-spacing: -0.026em;
     font-size: ${(props) => rem(props.theme.fontSize.h1)};
 
-    @media all and (max-width: 767px) {
+    @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
       font-size: 40px;
       margin-bottom: 42px;
     }
@@ -84,7 +88,7 @@ export const GlobalStyles = createGlobalStyle`
 `
 
 export const CustomGrid = styled(Grid)`
-  @media all and (max-width: 767px) {
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     padding-left: 20px;
     padding-right: 20px;
   }

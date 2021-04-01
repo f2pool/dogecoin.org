@@ -20,9 +20,9 @@ export const Title = styled.h2`
   margin-bottom: 0;
 
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
-    font-size: ${rem(30)};
-    line-height: ${rem(36)};
+    font-size: 30px;
     letter-spacing: -1.5px;
+    line-height: 36px;
   }
 `
 export const RowWrapper = styled(Row)`

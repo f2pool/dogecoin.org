@@ -21,14 +21,20 @@ export const Wrapper = styled.div`
 
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
     &:not(:last-child) {
-      padding-bottom: ${rem(96)};
+      padding-bottom: 40px;
     }
   }
 `
 export const RadiusWrapper = styled(Wrapper)`
   padding-top: ${rem(170)};
   border-radius: ${rem(63)} ${rem(63)} 0 0;
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    padding-top: 60px;
+    border-radius: 24px 24px 0 0;
+  }
 `
+
 export const TabsTitles = styled.div`
   text-align: center;
   margin-bottom: ${rem(48)};
@@ -39,7 +45,16 @@ export const TabsTitles = styled.div`
     color: ${(props) => props.theme.colors.primary};
     margin-bottom: ${rem(-4)};
   }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    margin-bottom: 30px;
+
+    p {
+      font-size: 16px;
+    }
+  }
 `
+
 export const TabsButtons = styled.div`
   & > a:not(:last-child) {
     margin-bottom: ${rem(24)};
@@ -55,7 +70,13 @@ export const TabsButtons = styled.div`
       transition: all 0.3s ease;
     }
   }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    a {
+    }
+  }
 `
+
 export const TabsCol = styled(Col)`
   &:first-child {
     padding-right: ${rem(24)};
@@ -63,19 +84,22 @@ export const TabsCol = styled(Col)`
   &:last-child {
     padding-left: ${rem(24)};
   }
+
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
     &:first-child {
       padding: 0;
-      margin-bottom: ${rem(72)};
+      margin-bottom: 40px;
     }
     &:last-child {
       padding: 0;
     }
   }
 `
+
 export const CardsContainerCol = styled(Col)`
   max-width: 100%;
 `
+
 export const CardsRow = styled(Row)`
   max-width: 100%;
   a {
@@ -93,9 +117,12 @@ export const CardsRow = styled(Row)`
     }
 
     @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+      margin-bottom: 16px;
+
       &:nth-child(odd) {
         padding: 0;
       }
+
       &:nth-child(even) {
         padding: 0;
       }
@@ -113,8 +140,8 @@ export const SocialCardsRow = styled(Row)`
 
     @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
       max-width: initial;
-      padding: ${rem(8)};
-      margin-bottom: ${rem(24)};
+      padding: 0 6px;
+      margin-bottom: 12px;
     }
   }
 `

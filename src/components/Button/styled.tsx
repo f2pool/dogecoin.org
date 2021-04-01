@@ -25,8 +25,8 @@ export const Icon = styled.img`
 `
 
 export const Main = styled.button<ButtonProps>`
-  --padding-horizontal: ${(props) => (props.$icon && props.$fullWidth ? rem(30) : rem(18))};
-  --padding-vertical: ${rem(40)};
+  --padding-horizontal: ${rem(40)};
+  --padding-vertical: ${(props) => (props.$icon && props.$fullWidth ? rem(30) : rem(18))};
 
   font-size: ${(props) => (props.$icon && props.$fullWidth ? rem(31) : rem(25))};
   font-weight: ${(props) => props.theme.fontWeight.bold};
@@ -34,11 +34,7 @@ export const Main = styled.button<ButtonProps>`
   letter-spacing: -0.5px;
   color: ${(props) => props.theme.colors.primary};
 
-  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
-    font-size: ${(props) => (props.$icon && props.$fullWidth ? rem(20) : rem(18))};
-  }
-
-  padding: var(--padding-horizontal) var(--padding-vertical);
+  padding: var(--padding-vertical) var(--padding-horizontal);
   border-radius: ${rem(32)};
 
   display: flex;
@@ -47,6 +43,12 @@ export const Main = styled.button<ButtonProps>`
   width: ${(props) => (props.$fullWidth ? "100%" : "auto")};
   outline: none !important;
   transition: all 0.3s ease;
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    font-size: ${(props) => (props.$icon && props.$fullWidth ? "20px" : "16px")};
+    padding: ${(props) => (props.$icon && props.$fullWidth ? "20px" : "14px")} 30px;
+    border-radius: 100px;
+  }
 
   &:is(button) {
     cursor: pointer;
@@ -70,7 +72,7 @@ export const Main = styled.button<ButtonProps>`
   ${(props) =>
     props.backgroundColor === "black" &&
     css`
-      background-color: ${props.theme.colors.black};
+      background-color: ${props.theme.colors.dark};
       color: ${props.theme.colors.white};
     `}
 
@@ -112,7 +114,7 @@ export const Main = styled.button<ButtonProps>`
       border-radius: ${rem(32)};
 
       &:hover {
-        background-color: ${rgba("#979797", 0.2)};
+        box-shadow: inset 0 0 0 2px ${rgba("#979797", 1)};
       }
 
       svg {
@@ -135,6 +137,11 @@ export const Main = styled.button<ButtonProps>`
 
       svg {
         width: ${rem(64)};
+      }
+
+      @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+        padding: 8px;
+        border-radius: 16px;
       }
     `}
 
@@ -181,11 +188,22 @@ export const Main = styled.button<ButtonProps>`
         width: ${rem(40)};
       }
 
-      @media all and (min-width: 321px) {
-        svg,
+      svg,
+      img {
+        position: absolute;
+        left: var(--padding-vertical);
+      }
+
+      @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+        border-radius: 24px;
+        padding: 22px 40px;
+
+        svg {
+          width: 30px;
+        }
+
         img {
-          position: absolute;
-          left: var(--padding-vertical);
+          width: 40px;
         }
       }
     `}

@@ -13,6 +13,10 @@ export const Container = styled.div<WrapperProps>`
     css`
       transform: rotate(-3deg) scale(1.01);
       padding: ${rem(60)} 0;
+
+      @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+        padding: 20px 0;
+      }
     `}
 `
 
@@ -31,6 +35,14 @@ export const Text = styled.div`
     transform: translate(-50%, -50%);
     background-color: ${(props) => props.theme.colors.white};
   }
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    &:after {
+      width: 10px;
+      height: 10px;
+      top: 60%;
+    }
+  }
 `
 
 export const Wrapper = styled.div<WrapperProps>`
@@ -39,6 +51,11 @@ export const Wrapper = styled.div<WrapperProps>`
   font-size: ${rem(48)};
   color: ${(props) => props.theme.colors.secondary};
   letter-spacing: ${rem(-1.09)};
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
+    font-size: 20px;
+    font-weight: normal;
+  }
 
   ${(props) =>
     props.layout === "bold" &&
@@ -56,8 +73,9 @@ export const Wrapper = styled.div<WrapperProps>`
         display: none;
       }
 
-      @media all and (max-width: 767px) {
+      @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
         font-size: 40px;
+        font-weight: bold;
 
         .ticker {
           height: 40px !important;
