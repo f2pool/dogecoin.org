@@ -1,5 +1,5 @@
 export default {
-  ABOUT_TITLE: "What is <span>DIP-1337</span>?",
+  ABOUT_TITLE: 'Introducing <span><a href="https://github.com/dogeletariatdan/dips/blob/master/dip-1337.mediawiki">DIP-1337</a></span>',
   LEAD_BUTTON_TEXT_1: "Let’s Wow",
   LEAD_BUTTON_TEXT_2: "Video",
   ABOUT_TEXT_LEAD: "102 whales such hodl, shibe need loot.",
@@ -13,7 +13,7 @@ export default {
   GUIDE_STEP_2_TITLE: "Get Some Dogecoin",
   GUIDE_STEP_2_SECTION_TITLE: "You can acquire Dogecoin through these apps and exchanges",
   GUIDE_STEP_3_SUBTITLE: "STEP 3",
-  GUIDE_STEP_3_TITLE: "User Your Dogecoin",
+  GUIDE_STEP_3_TITLE: "Use Your Dogecoin",
   GUIDE_STEP_3_CARD_ONE: "Bitpay is making it easier to spend Dogecoin for everyday items.",
   GUIDE_STEP_3_CARD_TWO: "Coming Soon: NFTs from Snoop",
   GUIDE_STEP_3_CARD_THREE: "Here is a listing of places which accept Dogecoin",

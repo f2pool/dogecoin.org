@@ -13,7 +13,7 @@ import * as S from "./styled"
 const slides = [
   {
     staticImg: (alt: string) => <StaticImage src={"../../assets/images/memes/dip.png"} alt={alt} />,
-    link: "#",
+    link: "https://github.com/dogecoin/dips/pull/5",
   },
   {
     staticImg: (alt: string) => <StaticImage src={"../../assets/images/memes/mavericks.png"} alt={alt} />,
