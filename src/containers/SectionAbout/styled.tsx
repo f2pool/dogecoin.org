@@ -3,6 +3,10 @@ import { rem } from "polished"
 
 export const Title = styled.h2`
   line-height: 0.95;
+
+  span {
+    white-space: nowrap;
+  }
 `
 
 export const Text = styled.div`

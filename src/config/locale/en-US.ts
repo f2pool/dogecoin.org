@@ -1,9 +1,8 @@
 export default {
-  ABOUT_TITLE: "What is DIP-1337?",
+  ABOUT_TITLE: "What is <span>DIP-1337</span>?",
   LEAD_BUTTON_TEXT_1: "Let’s Wow",
   LEAD_BUTTON_TEXT_2: "Video",
-  ABOUT_TEXT_LEAD:
-    "102 whales such hodl, shibe need loot.",
+  ABOUT_TEXT_LEAD: "102 whales such hodl, shibe need loot.",
   ABOUT_TEXT:
     "shibe add little paw to zapzap coins, give to smol hodl, is gud. shibe ask french cousin for big people talk. jacques very brain, warrior priest, revolutionary, much write. cousin eat rich, much tasty. shibes eat rich too? snacc on rich, make much random, bring coins back. ask zapzap car man, vote for sploot? shibe will ride shiny truck, such wag.",
   GUIDE_TITLE: "It is very easy to start using Dogecoin",

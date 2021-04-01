@@ -31,7 +31,7 @@ const SectionAbout: React.FC = () => {
       <Section as={S.WrapperFirst} id="about">
         <Row center="xs">
           <Col xs={12} sm={8} md={7}>
-            <S.Title>{title}</S.Title>
+            <S.Title dangerouslySetInnerHTML={{ __html: title }} />
             <S.Media>
               <StaticImage src={"../../assets/images/doge-main.jpg"} alt="Doge" width={683} height={396} />
             </S.Media>
