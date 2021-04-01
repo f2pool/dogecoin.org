@@ -18,7 +18,7 @@ const Banner: React.FC<BannerProps> = ({ texts, type, ...rest }: BannerProps) =>
       <PageVisibility onChange={handleVisibilityChange}>
         {pageIsVisible && (
           <S.Wrapper layout={type} {...rest}>
-            <Ticker speed={0.5} move={false}>
+            <Ticker speed={0.5}>
               {({ index }) => {
                 const currentIndex = index % texts.length
 
