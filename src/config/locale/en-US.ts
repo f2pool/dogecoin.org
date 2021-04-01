@@ -13,7 +13,7 @@ export default {
   GUIDE_STEP_2_TITLE: "Get Some Dogecoin",
   GUIDE_STEP_2_SECTION_TITLE: "You can acquire Dogecoin through these apps and exchanges",
   GUIDE_STEP_3_SUBTITLE: "STEP 3",
-  GUIDE_STEP_3_TITLE: "User Your Dogecoin",
+  GUIDE_STEP_3_TITLE: "Use Your Dogecoin",
   GUIDE_STEP_3_CARD_ONE: "Bitpay is making it easier to spend Dogecoin for everyday items.",
   GUIDE_STEP_3_CARD_TWO: "Coming Soon: NFTs from Snoop",
   GUIDE_STEP_3_CARD_THREE: "Here is a listing of places which accept Dogecoin",
