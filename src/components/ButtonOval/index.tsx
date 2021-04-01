@@ -18,6 +18,7 @@ interface OvalProps {
   shapeRotate?: number | string
   anchor?: boolean
   href?: string | null
+  gatsbyLink?: boolean
   onClick?: Function | null
 }
 
@@ -27,6 +28,7 @@ const ButtonOval: React.FC<OvalProps> = ({
   icon = null,
   shapeType = "landing-copy",
   href = null,
+  gatsbyLink = false,
   onClick = null,
   shapeColor,
   anchor = false,
@@ -41,6 +43,7 @@ const ButtonOval: React.FC<OvalProps> = ({
         textColor={textColor}
         icon={icon}
         href={href}
+        gatsbyLink={gatsbyLink}
         onClick={onClick}
         anchor={anchor}
         as={shapeType === "landing-copy" ? "a" : "button"}

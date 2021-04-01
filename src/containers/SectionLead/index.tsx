@@ -45,7 +45,14 @@ const SectionLead: React.FC = () => {
             <TypeWriter />
           </S.Title>
           <S.ShapesWrapper>
-            <ButtonOval text={linkText} shapeType="landing-copy" shapeColor="#FFD203" href="/#about" anchor />
+            <ButtonOval
+              text={linkText}
+              shapeType="landing-copy"
+              shapeColor="#FFD203"
+              href="/#about"
+              gatsbyLink
+              anchor
+            />
             <ButtonOval
               text={videoText}
               icon={<IconPlay />}
