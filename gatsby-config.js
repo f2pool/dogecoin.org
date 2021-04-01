@@ -1,6 +1,5 @@
-// TODO: bring back pathPrefix if needed
 module.exports = {
-  // pathPrefix: "/dogecoin.org",
+  pathPrefix: "/dogecoin.org",
   siteMetadata: {
     name: "dogecoin.org",
     title: "dogecoin.org",

@@ -7,16 +7,16 @@
     "format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}'",
     "eslint": "eslint 'src/**/*.ts?(x)'",
     "start": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build --prefix-paths"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dogecoinorg/dogecoin.org.git"
+    "url": "git+https://github.com/stakefish/dogecoin.org.git"
   },
   "author": "stakefish team",
   "license": "Apache-2.0 License",
   "bugs": {
-    "url": "https://github.com/dogecoinorg/dogecoin.org/issues"
+    "url": "https://github.com/stakefish/dogecoin.org/issues"
   },
   "browserslist": {
     "production": [
@@ -30,13 +30,11 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://github.com/dogecoinorg/dogecoin.org#readme",
+  "homepage": "https://github.com/stakefish/dogecoin.org#readme",
   "dependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.1.2",
     "gatsby-plugin-image": "^1.2.0",
     "gatsby-plugin-sharp": "^3.2.0",
-    "gatsby-plugin-styled-components": "^4.2.0",
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "polished": "^4.1.1",
@@ -47,7 +45,7 @@
     "react-page-visibility": "^6.4.0",
     "react-styled-flexboxgrid": "^3.2.1",
     "react-ticker": "^1.2.2",
-    "styled-components": "^5.2.3",
+    "styled-components": "^5.2.1",
     "typewriter-effect": "^2.17.0"
   },
   "devDependencies": {
