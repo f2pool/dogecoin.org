@@ -3,7 +3,7 @@ import { Row, Col } from "react-styled-flexboxgrid"
 import { CustomGrid } from "../../core/GlobalStyles"
 
 import { useFormatMessages } from "../../utils/hooks"
-import { IconGithub, IconReddit, IconDiscord, IconFacebook, IconTwitter, IconSubReddit } from "../../icons"
+import { IconGithub, IconReddit, IconDiscord, IconTwitter } from "../../icons"
 import Banner from "../../components/Banner"
 import Button from "../../components/Button"
 
