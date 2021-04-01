@@ -114,7 +114,7 @@ export const Main = styled.button<ButtonProps>`
       border-radius: ${rem(32)};
 
       &:hover {
-        background-color: ${rgba("#979797", 0.2)};
+        box-shadow: inset 0 0 0 2px ${rgba("#979797", 1)};
       }
 
       svg {

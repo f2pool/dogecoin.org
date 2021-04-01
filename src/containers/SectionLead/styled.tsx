@@ -80,7 +80,7 @@ export const Circle = styled.div`
 
   img {
     border-radius: 1000px;
-    max-width: 100%;
+    width: 100%;
   }
 `
 

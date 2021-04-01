@@ -12,7 +12,7 @@ export const ShapeWrapper = styled.div`
   justify-content: center;
 
   > svg {
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
     position: relative;
   }
