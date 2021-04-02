@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import { withPrefix } from "gatsby"
 import { Row, Col } from "react-styled-flexboxgrid"
+import Draggable from "react-draggable"
 
 import { useFormatMessages } from "../../utils/hooks"
 
@@ -16,7 +17,6 @@ import { IconPlay } from "../../icons"
 import * as S from "./styled"
 
 const SectionLead: React.FC = () => {
-  const [dragStart, setDragStart] = useState(false)
   const [linkText, videoText] = useFormatMessages([{ id: "LEAD_BUTTON_TEXT_1" }, { id: "LEAD_BUTTON_TEXT_2" }])
 
   return (
@@ -30,12 +30,26 @@ const SectionLead: React.FC = () => {
       </>
       <Row middle="sm" reverse="sm" style={{ height: "100%" }}>
         <Col xs={12} sm={6}>
-          <S.Doge onDragStart={() => setDragStart(true)} onDragEnd={() => setDragStart(false)}>
-            <S.Circle style={{ zIndex: dragStart ? 2 : "auto" }}>
+          <S.Doge>
+            <S.Circle>
               <img src={withPrefix("/images/doge.png")} alt="Much Doge" width="637px" />
             </S.Circle>
             <S.Glasses>
-              <img src={withPrefix("/images/deal-with-it.svg")} alt="Glasses" width="400px" />
+              <Draggable position={{ x: 0, y: 0 }}>
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.3 191.9">
+                    <g fill="#FFF">
+                      <path d="M307.455 149.953l4.5-19.488 19.488 4.5-4.5 19.488zm-15.005-23.979l4.5-19.488 19.487 4.5-4.5 19.488zm-15.006-23.979l4.5-19.488 19.488 4.5-4.5 19.488zm68.996 56.931l4.5-19.488 19.488 4.5-4.5 19.488zm-15.006-23.979l4.5-19.488 19.488 4.5-4.5 19.488zm-15.006-23.979l4.5-19.488 19.488 4.5-4.5 19.488zM54.024 91.417l4.5-19.488 19.488 4.5-4.5 19.488zM39.019 67.438l4.5-19.488 19.488 4.5-4.5 19.488zM24.013 43.46l4.5-19.489L48 28.471 43.5 47.96zm68.973 57.027L97.486 81l19.488 4.5-4.5 19.488z" />
+                      <path d="M77.98 76.509l4.5-19.488 19.489 4.5-4.5 19.488zM62.998 52.432l4.5-19.488 19.487 4.5-4.5 19.488z" />
+                    </g>
+                    <g fill="#222533">
+                      <path d="M316.4 111l19.5 4.5-4.5 19.5-19.5-4.5 4.5-19.5z" />
+                      <path d="M13.5 0L0 58.5 19.5 63 15 82.4l19.5 4.5-4.5 19.5 116.9 27 4.5-19.5 19.5 4.5 4.5-19.5 19.5 4.5 4.5-19.5 19.5 4.5 4.5-19.5 39.1 9-9 39 19.5 4.5-4.5 19.5 19.5 4.5-4.5 19.5 116.9 27 4.5-19.5 19.5 4.5 4.5-19.5 19.5 4.5 4.5-19.5 19.5 4.5 9-39L13.5 0zm79.4 100.4L97.4 81l-19.5-4.5L73.4 96 54 91.4 58.5 72 39 67.5 43.5 48 24 43.5 28.5 24 48 28.5 43.5 48 63 52.5 67.5 33 87 37.5 82.4 57l19.5 4.5L97.4 81l19.5 4.5-4.5 19.5-19.5-4.6zM346.4 159l4.5-19.5-19.5-4.5-4.5 19.5-19.5-4.5 4.5-19.5-19.5-4.5 4.5-19.5-19.5-4.5 4.5-19.5 19.5 4.5-4.5 19.5 19.5 4.5 4.5-19.5 19.5 4.5-4.5 19.5 19.5 4.5-4.5 19.5 19.5 4.5-4.5 19.5-19.5-4.5z" />
+                      <path d="M63 52.5L82.4 57l-4.5 19.5L58.5 72 63 52.5z" />
+                    </g>
+                  </svg>
+                </div>
+              </Draggable>
             </S.Glasses>
           </S.Doge>
         </Col>
