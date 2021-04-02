@@ -90,7 +90,7 @@ export const Glasses = styled.div`
   top: ${rem(170)};
   left: ${rem(110)};
   will-change: transform, opacity;
-  animation: 0.5s ${rotateIn} ease forwards 0.1s;
+  animation: 0.5s ${rotateIn} cubic-bezier(0.47, 1.64, 0.2, 0.8) forwards 0.1s;
   transform: scale(3) translate(-100%, 100%) rotate(20deg);
   opacity: 0;
 
@@ -101,6 +101,10 @@ export const Glasses = styled.div`
     cursor: grab;
     transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
 
+    &.react-draggable-dragging {
+      transition: none;
+    }
+
     &:active {
       cursor: grabbing;
     }
@@ -108,7 +112,7 @@ export const Glasses = styled.div`
 
   @media all and (max-width: 767px) {
     width: 106px;
-    top: 60px;
-    left: 28px;
+    top: 50px;
+    left: 25px;
   }
 `
