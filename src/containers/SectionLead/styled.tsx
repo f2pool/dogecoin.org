@@ -94,16 +94,19 @@ export const Glasses = styled.div`
   transform: scale(3) translate(-100%, 100%) rotate(20deg);
   opacity: 0;
 
-  svg {
-    z-index: 100;
-    max-width: 100%;
-    position: relative;
-    cursor: grab;
+  div {
     transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
 
     &.react-draggable-dragging {
       transition: none;
     }
+  }
+
+  svg {
+    z-index: 100;
+    max-width: 100%;
+    position: relative;
+    cursor: grab;
 
     &:active {
       cursor: grabbing;
