@@ -87,18 +87,19 @@ export const Circle = styled.div`
 export const Glasses = styled.div`
   width: ${rem(345)};
   position: absolute;
-  top: ${rem(210)};
+  top: ${rem(170)};
   left: ${rem(110)};
   will-change: transform, opacity;
   animation: 0.5s ${rotateIn} ease forwards 0.1s;
   transform: scale(3) translate(-100%, 100%) rotate(20deg);
   opacity: 0;
 
-  img {
+  svg {
+    z-index: 100;
     max-width: 100%;
-    transform: rotate(13deg);
     position: relative;
     cursor: grab;
+    transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
 
     &:active {
       cursor: grabbing;
