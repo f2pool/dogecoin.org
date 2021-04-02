@@ -93,6 +93,7 @@ export const Glasses = styled.div`
   animation: 0.5s ${rotateIn} cubic-bezier(0.47, 1.64, 0.2, 0.8) forwards 0.1s;
   transform: scale(3) translate(-100%, 100%) rotate(20deg);
   opacity: 0;
+  z-index: 10;
 
   div {
     transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);
