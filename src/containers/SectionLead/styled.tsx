@@ -90,10 +90,10 @@ export const Glasses = styled.div`
   top: ${rem(170)};
   left: ${rem(110)};
   will-change: transform, opacity;
-  animation: 0.5s ${rotateIn} cubic-bezier(0.47, 1.64, 0.2, 0.8) forwards 0.1s;
+  animation: 0.7s ${rotateIn} cubic-bezier(0.47, 1.64, 0.2, 0.8) forwards 0.1s;
   transform: scale(3) translate(-100%, 100%) rotate(20deg);
   opacity: 0;
-  z-index: 10;
+  z-index: 20;
 
   div {
     transition: all 400ms cubic-bezier(0.47, 1.64, 0.41, 0.8);

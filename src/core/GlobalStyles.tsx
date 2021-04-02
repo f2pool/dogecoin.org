@@ -13,9 +13,25 @@ export const GlobalStyles = createGlobalStyle`
     @media all and (max-width: 767px) {
       font-size: 9px
     }
+    
+    @media all and (min-width: 1680px) {
+      font-size: 18px;
+    }
 
     @media all and (min-width: 2000px) {
-      font-size: 18px;
+      font-size: 20px;
+    }
+
+    @media all and (min-width: 2561px) {
+      font-size: 24px;
+    }
+
+    @media all and (min-width: 3000px) and (min-height: 1336px)  {
+      font-size: 28px;
+    }
+
+    @media all and (min-width: 4000px) and (min-height: 1336px)  {
+      font-size: 38px;
     }
   }
 
@@ -88,6 +104,8 @@ export const GlobalStyles = createGlobalStyle`
 `
 
 export const CustomGrid = styled(Grid)`
+  max-width: 100%;
+
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.sm}em`}) {
     padding-left: 20px;
     padding-right: 20px;
