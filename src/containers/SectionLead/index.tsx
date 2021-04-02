@@ -19,10 +19,6 @@ import * as S from "./styled"
 const SectionLead: React.FC = () => {
   const [linkText, videoText] = useFormatMessages([{ id: "LEAD_BUTTON_TEXT_1" }, { id: "LEAD_BUTTON_TEXT_2" }])
 
-  const onStop = (event) => {
-    console.log(event, "=event=")
-  }
-
   return (
     <Section as={S.Wrapper}>
       <>
@@ -39,7 +35,7 @@ const SectionLead: React.FC = () => {
               <img src={withPrefix("/images/doge.png")} alt="Much Doge" width="637px" />
             </S.Circle>
             <S.Glasses>
-              <Draggable position={{ x: 0, y: 0 }} onStop={onStop}>
+              <Draggable position={{ x: 0, y: 0 }}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.3 191.9">
                   <g fill="#FFF">
                     <path d="M307.455 149.953l4.5-19.488 19.488 4.5-4.5 19.488zm-15.005-23.979l4.5-19.488 19.487 4.5-4.5 19.488zm-15.006-23.979l4.5-19.488 19.488 4.5-4.5 19.488zm68.996 56.931l4.5-19.488 19.488 4.5-4.5 19.488zm-15.006-23.979l4.5-19.488 19.488 4.5-4.5 19.488zm-15.006-23.979l4.5-19.488 19.488 4.5-4.5 19.488zM54.024 91.417l4.5-19.488 19.488 4.5-4.5 19.488zM39.019 67.438l4.5-19.488 19.488 4.5-4.5 19.488zM24.013 43.46l4.5-19.489L48 28.471 43.5 47.96zm68.973 57.027L97.486 81l19.488 4.5-4.5 19.488z" />
