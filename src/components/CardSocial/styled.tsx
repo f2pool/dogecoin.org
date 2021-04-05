@@ -45,9 +45,17 @@ export const Card = styled.a`
     margin-bottom: 0;
   }
 
+  ${IconWrapper} {
+    transition: border 0.3s ease;
+
+    > div {
+      box-shadow: none !important;
+    }
+  }
+
   &:hover {
     ${IconWrapper} {
-      background-color: rgba(255, 210, 3, 0.2);
+      border-color: rgba(255, 210, 3, 1);
     }
   }
 
