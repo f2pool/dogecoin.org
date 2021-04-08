@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import { rem } from "polished"
 import { Row, Col } from "react-styled-flexboxgrid"
+import { CustomGrid } from "../../../core/GlobalStyles"
+import Decor from "../../../components/Decor"
 
 export const SectionWrapper = styled.div`
   position: relative;
@@ -8,6 +10,7 @@ export const SectionWrapper = styled.div`
 
 export const Wrapper = styled.div`
   position: relative;
+  overflow: visible;
   background-color: ${(props) => props.theme.colors.background};
 
   & > * {
@@ -16,7 +19,9 @@ export const Wrapper = styled.div`
   }
 
   &:not(:last-child) {
-    padding-bottom: ${rem(160)};
+    ${CustomGrid} {
+      padding-bottom: ${rem(160)};
+    }
   }
 
   @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
@@ -143,5 +148,17 @@ export const SocialCardsRow = styled(Row)`
       padding: 0 6px;
       margin-bottom: 12px;
     }
+  }
+`
+
+export const DecorWrapper = styled(Decor)`
+  left: 0px;
+  top: 4.5%;
+  width: 100%;
+  height: calc(100% + 2.5rem + 4.5%);
+
+  @media all and (max-width: ${(props) => `${props.theme.flexboxgrid.breakpoints.md}em`}) {
+    width: calc(100% + ${rem(80)});
+    left: calc(${rem(80)} / -2);
   }
 `

@@ -1,10 +1,10 @@
 import React from "react"
+import { useMediaQuery } from "react-responsive"
 import { Row, Col } from "react-styled-flexboxgrid"
 
 import { useFormatMessages } from "../../../utils/hooks"
 
-// import Decor from "../../../components/Decor"
-// import PathLine from "../../../assets/shapes/path-line"
+import PathLine from "../../../assets/shapes/path-line"
 import Section from "../../../components/Section"
 import CardBoxLink from "../../../components/CardBoxLink"
 import CardSocial from "../../../components/CardSocial/index"
@@ -39,6 +39,8 @@ const TabsGroup: React.FC<TabsGroupProps> = ({ groups }) => {
 }
 
 const SectionMain: React.FC = () => {
+  const isMobile = useMediaQuery({ maxWidth: 767 })
+
   const [
     titleOne,
     officialWalletTitle,
@@ -65,13 +67,13 @@ const SectionMain: React.FC = () => {
 
   return (
     <S.SectionWrapper>
-      {/* <>
-        <Decor style={{ top: "200px", left: "40vw", zIndex: 1 }} $width="700px">
-          <PathLine $type={4} $opacity={0.6} />
-        </Decor>
-      </> */}
-
       <Section as={S.RadiusWrapper}>
+        {!isMobile && (
+          <S.DecorWrapper>
+            <PathLine $type={2} />
+          </S.DecorWrapper>
+        )}
+
         <BlockStepLead step={1} title={titleOne} />
         <TabsGroup
           groups={[
@@ -90,6 +92,12 @@ const SectionMain: React.FC = () => {
       </Section>
 
       <Section as={S.Wrapper}>
+        {!isMobile && (
+          <S.DecorWrapper>
+            <PathLine $type={3} />
+          </S.DecorWrapper>
+        )}
+
         <BlockStepLead step={2} title={titleTwo} />
         <TabsGroup
           groups={[
@@ -104,6 +112,12 @@ const SectionMain: React.FC = () => {
       </Section>
 
       <Section as={S.Wrapper}>
+        {!isMobile && (
+          <S.DecorWrapper>
+            <PathLine $type={4} />
+          </S.DecorWrapper>
+        )}
+
         <BlockStepLead step={3} />
         <Row center="xs">
           <S.CardsContainerCol md={12} lg={8}>
