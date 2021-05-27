@@ -58,8 +58,8 @@ export const stepTwoButtons = [
 export const stepFourLinks = [
   { type: "Reddit", link: LINKS.reddit, icon: <Button bordered icon={<IconReddit />} as="div" /> },
   { type: "Twitter", link: LINKS.twitter, icon: <Button bordered icon={<IconTwitter />} as="div" /> },
-  { type: "Github", link: LINKS.discord, icon: <Button bordered icon={<IconDiscord />} as="div" /> },
-  { type: "Discord", link: LINKS.facebook, icon: <Button bordered icon={<IconFacebook />} as="div" /> },
+  { type: "Discord", link: LINKS.discord, icon: <Button bordered icon={<IconDiscord />} as="div" /> },
+  { type: "Facebook", link: LINKS.facebook, icon: <Button bordered icon={<IconFacebook />} as="div" /> },
   { type: "Subreddit", link: LINKS.subreddit, icon: <Button bordered icon={<IconSubReddit />} as="div" /> },
-  { type: "Facebook", link: LINKS.github, icon: <Button bordered icon={<IconGithub />} as="div" /> },
+  { type: "Github", link: LINKS.github, icon: <Button bordered icon={<IconGithub />} as="div" /> },
 ]
