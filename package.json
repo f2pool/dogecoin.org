@@ -1,73 +1,42 @@
 {
   "name": "dogecoin.org",
-  "version": "0.1.0",
-  "description": "dogecoin.org official website",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "dogecoin.org website",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "format": "prettier --config .prettierrc 'src/**/*.{ts,tsx}'",
-    "eslint": "eslint 'src/**/*.ts?(x)'",
-    "start": "gatsby develop",
-    "build": "gatsby build --prefix-paths"
+    "serve": "parcel serve ./src/index.html",
+    "watch-css": "parcel watch ./src/css/styles.css --dist-dir public/css --public-url /css",
+    "build-css": "parcel build ./src/css/styles.css --dist-dir public/css --public-url /css --no-hmr",
+    "build-static": "rm -rf public/ && NODE_ENV=production parcel build ./src/index.html --dist-dir public --public-url / --no-content-hash --no-source-maps"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dogecoinorg/dogecoin.org.git"
+    "url": "git+https://github.com/stakefish/dogecoin.org.git"
   },
-  "author": "stakefish team",
-  "license": "Apache-2.0 License",
+  "keywords": [
+    "static",
+    "html",
+    "css"
+  ],
+  "author": "Balaj Marius",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dogecoinorg/dogecoin.org/issues"
+    "url": "https://github.com/stakefish/dogecoin.org/issues"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "homepage": "https://github.com/dogecoinorg/dogecoin.org#readme",
-  "dependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
-    "gatsby": "^3.1.2",
-    "gatsby-plugin-image": "^1.2.0",
-    "gatsby-plugin-sharp": "^3.2.0",
-    "gatsby-plugin-styled-components": "^4.2.0",
-    "gatsby-source-filesystem": "^3.2.0",
-    "gatsby-transformer-sharp": "^3.2.0",
-    "polished": "^4.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-draggable": "^4.4.3",
-    "react-helmet": "^6.1.0",
-    "react-intl": "^5.15.3",
-    "react-page-visibility": "^6.4.0",
-    "react-responsive": "^8.2.0",
-    "react-styled-flexboxgrid": "^3.2.1",
-    "react-ticker": "^1.2.2",
-    "styled-components": "^5.2.3",
-    "typewriter-effect": "^2.17.0"
-  },
+  "homepage": "https://github.com/stakefish/dogecoin.org#readme",
   "devDependencies": {
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "@types/react-helmet": "^6.1.0",
-    "@types/react-intl": "^3.0.0",
-    "@types/react-responsive": "^8.0.2",
-    "@types/styled-components": "^5.1.9",
-    "eslint": "^7.23.0",
-    "eslint-config-standard-with-typescript": "^20.0.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-standard": "^5.0.0",
-    "gatsby-plugin-react-svg": "^3.0.0",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.3"
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.11",
+    "parcel": "^2.0.0-rc.0",
+    "postcss": "^8.3.11",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {
+    "add-zero": "^1.0.0",
+    "calculate-percentages": "^1.0.0",
+    "countdown-js": "^1.0.2",
+    "date-fns": "^2.26.0",
+    "reset-css": "^5.0.1"
   }
 }
