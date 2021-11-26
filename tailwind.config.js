@@ -11,7 +11,7 @@ module.exports = {
         yellow: "#f1f462",
       },
       backgroundImage: {
-        main: "url('../img/bg.png')",
+        main: "url('../img/bg.jpg')",
       },
       width: {
         104: "28rem",
