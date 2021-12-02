@@ -1,4 +1,5 @@
 import Countdown from "countdown-js";
+import { debounce } from "debounce";
 import addZero from "add-zero";
 import percentage from "calculate-percentages";
 import differenceInMinutes from "date-fns/differenceInMinutes";
@@ -8,16 +9,58 @@ import differenceInMinutes from "date-fns/differenceInMinutes";
  */
 const DASH_ARRAY = 100;
 
-const END = new Date("Mon Dec 06 2021 00:00:00").getTime();
-const START = new Date("Wed Nov 24 2021 00:00:00").getTime();
+const END = new Date("12/06/2021 1:00:00 PM UTC").getTime();
+const START = new Date("11/24/2021 0:00:00 AM UTC").getTime();
 
 /**
  * Callbacks
  */
+const resizeVideoFactory = (player) => {
+  return debounce(() => {
+    const playerSize = player.getBoundingClientRect();
+    const wrapperSize = player.parentNode.getBoundingClientRect();
+
+    const isFullSize = playerSize.width === wrapperSize.width && playerSize.height === wrapperSize.height;
+
+    if (!isFullSize) {
+      player.classList.add("hidden");
+
+      player.width = wrapperSize.width;
+      player.height = wrapperSize.height;
+
+      setTimeout(() => {
+        player.classList.remove("hidden");
+      }, 1);
+    }
+  }, 100);
+};
+
+const toggleComponent = (name) => {
+  const componentVideo = document.querySelector("[data-component-video]");
+  const componentCountdown = document.querySelector("[data-component-countdown]");
+
+  switch (name) {
+    case "data-component-video":
+      componentVideo.classList.remove("hidden");
+      componentCountdown.classList.add("hidden");
+      break;
+    case "data-component-countdown":
+      componentVideo.classList.add("hidden");
+      componentCountdown.classList.remove("hidden");
+      break;
+    default:
+    // do nothing
+  }
+};
+
 const finish = () => {
-  /**
-   * @todo Embed "Dogecoin Billionaire" video.
-   */
+  const player = document.querySelector("[data-video-player]");
+  const resizeVideo = resizeVideoFactory(player);
+
+  toggleComponent("data-component-video");
+
+  resizeVideo();
+  window.addEventListener("resize", resizeVideo);
 };
 
 const update = (timeLeft) => {
@@ -29,6 +72,8 @@ const update = (timeLeft) => {
 
 const progress = () => {
   const bar = document.querySelector("[data-progress-bar]");
+
+  toggleComponent("data-component-countdown");
 
   const difference = differenceInMinutes(END, START);
   const differenceToday = differenceInMinutes(END, new Date());
