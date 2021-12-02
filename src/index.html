@@ -30,7 +30,13 @@
         <img src="img/logo.png" class="w-56 md:w-96 lg:w-104" alt="much doge such wow" />
       </a>
 
-      <div class="mx-auto mt-5 sm:mt-8 p-3 sm:p-5 relative">
+      <div class="mx-auto mt-5 sm:mt-8 hidden" data-component-video>
+        <div class="relative flex justify-center items-center w-video-xs h-video-xs sm:w-video-sm sm:h-video-sm md:w-video-md md:h-video-md lg:w-video-lg lg:h-video-lg xl:w-video-xl xl:h-video-xl 2xl:w-video-2xl 2xl:h-video-2xl">
+          <iframe src="https://www.youtube.com/embed/GoZqhX7vKWs?vq=hd1080&modestbranding=1&showinfo=0&rel=0&theme=light&color=white" width="320" height="180" frameborder="0" data-video-player></iframe>
+        </div>
+      </div>
+
+      <div class="mx-auto mt-5 sm:mt-8 p-3 sm:p-5 relative hidden" data-component-countdown>
         <svg class="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 120 120" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="60" cy="60" r="58" fill="none" stroke-width="2" />
           <circle cx="60" cy="60" r="58" fill="none" stroke-width="2" pathLength="100" data-progress-bar class="stroke-yellow" />
