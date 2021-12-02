@@ -47,5 +47,13 @@
             <sub><b>7768</b></sub>
         </a>
     </td></tr>
+<tr>
+    <td align="center">
+        <a href="https://github.com/mateuszsokola">
+            <img src="https://avatars.githubusercontent.com/u/215923?v=4" width="100;" alt="mateuszsokola"/>
+            <br />
+            <sub><b>Mateusz Sokola</b></sub>
+        </a>
+    </td></tr>
 </table>
 <!-- readme: contributors -end -->
