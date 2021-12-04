@@ -9,7 +9,7 @@ import differenceInMinutes from "date-fns/differenceInMinutes";
  */
 const DASH_ARRAY = 100;
 
-const END = new Date("12/06/2021 1:00:00 PM UTC").getTime();
+const END = new Date("12/06/2021 0:30:00 PM UTC").getTime();
 const START = new Date("11/24/2021 0:00:00 AM UTC").getTime();
 
 /**
